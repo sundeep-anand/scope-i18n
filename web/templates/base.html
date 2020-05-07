@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>translations subpackaging</title>
+    <style>
+        .content {
+            margin-left: 4%;
+            margin-right: 4%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            color:darkslategray;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .sub-content {
+            margin: 2%;
+        }
+    </style>
+    {% block style %}{% endblock %}
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+    {% block script %} {% endblock %}
+</body>
+
+<footer>
+    {% block footer %}{% endblock %}
+</footer>
+</html>

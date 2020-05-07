@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="content">
+    <h1>RPM Translations subpackaging</h1>
+    <h2>Problem Statement</h2>
+        <div class="sub-content">
+            <h3>Size</h3>
+                <p>Currently most of the RPM packaged applications ship the translations with them.
+                    Translations take up more space (even than fonts) in fedora workstation. Roughly 445 MB in F31 (respin).</p>
+                <p>Hence there could be a need to limit this considering fedora minimization initiative.</p>
+            <h3>Expected Benefits</h3>
+                <ul>
+                    <li>If we only install translation langpacks for the system/user locale that will reduce the footprint a lot. 
+                        Moreover, this will help with the minimization efforts.</li>
+                    <li>This could also be used if we will create the locale extensions for fedora flatpaks.</li>
+                </ul>
+            <h3>References</h3>
+                <a href="https://projects.engineering.redhat.com/browse/GNIN-649" target="_blank">Team JIRA</a></li> | 
+                <a href="https://teams.fedoraproject.org/project/silverblue/us/116" target="_blank">SilverBlue Ticket</a> |
+                <a href="https://github.com/rpm-software-management/rpm/issues/310" target="_blank">RPM Upstream</a>
+        </div>
+    <h2>Investigate</h2>
+        <div class="sub-content">
+            <ul>
+                <li>size</li>
+                <li>number of packages affected</li>
+                <li>number of .mo files</li>
+                <li>which binary package the translations live in now</li>
+            </ul>
+        </div>
+    <h2>Probable Solution/Options</h2>
+        <div class="sub-content">
+            <h3>What to solve</h3>
+                <ol>
+                    <li>how to generate names for subpackages, on which types/names of files, which Provides/Supplements, how they would be tied to the original package where translations are coming from. In other words, what MAINPKG would be (how to automatically determine it) and what XX to use?</li>
+                    <li>the support of automated subpackage generation from RPM, that is something what needs to be implemented in RPM.</li>
+                </ol>
+            <h3>Use-Cases</h3>
+            <h3>Working - UX <small>Packager/End-User</small></h3>
+        </div>
+</div>
+{% endblock %}
