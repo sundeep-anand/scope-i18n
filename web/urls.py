@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import TemplateView
 
-from .views import ReportsIndexPageView
+from .views import ReportsIndexPageView, SPECParseReportsView
 
 urlpatterns = [
     path('', ReportsIndexPageView.as_view(), name="index"),
+    path('reports', SPECParseReportsView.as_view(), name="reports"),
     path('admin/', admin.site.urls),
 ]
