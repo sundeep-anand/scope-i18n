@@ -2,12 +2,13 @@ import click
 
 from src.TranslationData import ParseTranslationData
 
+# SPECs are downloaded from https://src.fedoraproject.org/lookaside/
 @click.command()
 @click.option(
     '--type', help="Parse format, example, SPEC"
 )
 @click.option(
-    '--path', help="Directory path", 
+    '--path', help="Directory path",
     default='/home/suanand/Downloads/rpm-specs-latest/rpm-specs'
 )
 @click.pass_obj

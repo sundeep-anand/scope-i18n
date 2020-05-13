@@ -7,7 +7,7 @@
         <div class="sub-content">
             <h3>Size</h3>
                 <p>Currently most of the RPM packaged applications ship the translations with them.
-                    Translations take up more space (even than fonts) in fedora workstation. Roughly 445 MB in F31 (respin).</p>
+                    Translations take up more space (even than fonts) in fedora workstation.</p>
                 <p>Hence there could be a need to limit this considering fedora minimization initiative.</p>
             <h3>Expected Benefits</h3>
                 <ul>
@@ -23,8 +23,12 @@
     <h2>Investigate</h2>
         <div class="sub-content">
             <ul>
-                <li>number of packages affected - <a href="{% url 'reports' %}">reports</a></li>
-                <li>number of .mo files and their size - <strong>TBD</strong></li>
+                <li>number of packages affected - see <a href="{% url 'reports-find-lang' %}">reports</a></li>
+                <li>number of .mo files and their size - see reports <code>(for fedora base img)</code>: 
+                    <a href="{% url 'reports-size-count-sb' %}">silverblue</a> | 
+                    <a href="{% url 'reports-size-count-ws' %}">workstation</a> | 
+                    <a href="{% url 'reports-size-count-srv' %}">server</a>
+                </li>
                 <li>which binary package the translations live in now - <strong>TBD</strong></li>
             </ul>
         </div>

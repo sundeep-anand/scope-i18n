@@ -16,7 +16,7 @@ class ParseTranslationData(object):
     DELIMITER = "|"
 
     def _write_output(self, report_type, txt):
-        
+
         report_file = {
             'raw': 'reports/parse-output',
             'filter': 'reports/parse-filter',
@@ -25,19 +25,19 @@ class ParseTranslationData(object):
 
         if not report_type:
             return
-        
+
         f = open(report_file.get(report_type, ''), "a+")
         f.write(txt)
         f.close()
-    
+
     def __init__(self, type, path):
         super().__init__()
-        
+
         self.PARSE_TYPE = type
         self.SPEC_FILES_PATH = path
         self.TOTAL_SPEC_FILES = 0
         self.SPEC_USING_FIND_LANGS = 0
-    
+
     def get_specs(self):
         spec_files = []
         # collect spec files
@@ -50,14 +50,13 @@ class ParseTranslationData(object):
 
         spec_file_packets = []
 
-        for _ in range(0, int(len(spec_files)/window_size)+1):
+        for _ in range(0, int(len(spec_files) / window_size) + 1):
 
             spec_file_packets.append(spec_files[starting_point:end_point])
             starting_point = end_point + 1
             end_point += window_size
-        
-        return spec_file_packets
 
+        return spec_file_packets
 
     def pick_spec_file(self):
 
@@ -66,7 +65,7 @@ class ParseTranslationData(object):
         # yield one by one
         for packets in spec_packets:
             for f in packets:
-                try: 
+                try:
                     spec_absolute_path = path.join(self.SPEC_FILES_PATH, f)
                     if not spec_absolute_path:
                         break
@@ -80,20 +79,18 @@ class ParseTranslationData(object):
             gc.collect()
             time.sleep(2)
 
-
     def parse_spec_file(self):
 
-        
         for spec_obj_2 in self.pick_spec_file():
-        
+
             self.TOTAL_SPEC_FILES += 1
             # Pkg name and version
-            print("{0} {1}".format(spec_obj_2.Name, spec_obj_2.Version), end = '')
-            print(self.DELIMITER, end = '')
+            print("{0} {1}".format(spec_obj_2.Name, spec_obj_2.Version), end='')
+            print(self.DELIMITER, end='')
 
-            self._write_output('raw', 
-                "{0} {1}".format(spec_obj_2.Name, spec_obj_2.Version) + self.DELIMITER
-            )
+            self._write_output('raw', "{0} {1}".format(
+                spec_obj_2.Name, spec_obj_2.Version
+            ) + self.DELIMITER)
 
             # Pkgs and Subpackages
             # for pkg in spec_obj_2.getPackages() or []:
@@ -101,28 +98,28 @@ class ParseTranslationData(object):
             #     if pkg != spec_obj_2.Name:
             #         p_msg += " (subpackage)"
             #     print(p_msg)
-            print(" ".join(spec_obj_2.getPackages()), end = '')
-            print(self.DELIMITER, end = '')
+            print(" ".join(spec_obj_2.getPackages()), end='')
+            print(self.DELIMITER, end='')
 
             self._write_output('raw', " ".join(spec_obj_2.getPackages()) + self.DELIMITER)
-            
+
             # If there are find_langs in install section
             find_lang_str = ""
-            for i, j in spec_obj_2.section.get("install", {}).items(): 
+            for i, j in spec_obj_2.section.get("install", {}).items():
                 find_lang_lines = [x for x in j if '%find_lang' in x]
                 if find_lang_lines:
                     # print("If there is find_langs")
                     self.SPEC_USING_FIND_LANGS += 1
                     # print(i)
                     find_lang_str += " ".join(find_lang_lines)
-            print(find_lang_str, end = '')
-            print(self.DELIMITER, end = '')
+            print(find_lang_str, end='')
+            print(self.DELIMITER, end='')
 
             self._write_output('raw', find_lang_str + self.DELIMITER)
             if find_lang_str:
-                self._write_output('filter', 
-                    "{0} {1}".format(spec_obj_2.Name, spec_obj_2.Version) + self.DELIMITER
-                )
+                self._write_output('filter', "{0} {1}".format(
+                    spec_obj_2.Name, spec_obj_2.Version
+                ) + self.DELIMITER)
                 self._write_output('filter', find_lang_str)
                 self._write_output('filter', linesep)
 
@@ -134,8 +131,8 @@ class ParseTranslationData(object):
                     # print("Pkgs which contain MO files")
                     # print(i)
                     mo_pkgs_str += " ".join(mo_pkgs)
-            print(mo_pkgs_str, end = '')
-            print(self.DELIMITER, end = '')
+            print(mo_pkgs_str, end='')
+            print(self.DELIMITER, end='')
 
             self._write_output('raw', mo_pkgs_str + self.DELIMITER)
 

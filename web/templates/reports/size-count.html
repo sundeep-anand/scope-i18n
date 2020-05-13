@@ -1,0 +1,113 @@
+{% extends "../base.html" %}
+
+{% block style %}
+<style>
+a:hover {
+    color:lightslategrey;
+}
+a {
+    text-decoration: none !important;
+    color: darkslategrey;
+}
+table, th, td {
+    border-top: 1px dotted lightslategrey;
+    border-bottom: 1px dotted lightslategrey;
+    border-collapse: collapse;
+    width: 50%;
+    margin: 1%;
+    padding: 5px;
+    white-space:nowrap;
+}
+.sub-content-2 {
+    margin: 1%;
+    padding: 10px;
+    max-height: 500px;
+    overflow: scroll;
+    border: 1px dotted lightgrey;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+
+{% if summary %}
+<div class="content">
+    <h2>{{ summary }}<small class="pull-right">
+        <a href="{% url 'index' %}"><i class="fa fa-home"></i></a></small>
+    </h2>
+    <div class="sub-content">
+        {% if mo_files %}<div>
+            <h4>MO Files, Firefox Langpack</h4>
+            <table>
+                <thead>
+                    <tr style="color: darkgoldenrod;">
+                        <td>Path</td><td>Count</td><td>Size</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for path, values in translations.items %}
+                    <tr>
+                        <td>{{ path }}</td><td>{{ values.0 }}</td><td>{{ values.1 }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>{% endif %}
+    </div>
+    <div class="sub-content">
+        <h4>MO File Stats</h4>
+        {% if mo_file_stats %}
+        <div class="sub-content-2">
+            <table style="width: 100%;">
+                <thead>
+                    <tr style="color: darkgoldenrod;">
+                        <td></td><td>Application</td><td>Count</td><td>Locales</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for app, mo_stats in mo_file_stats.items %}
+                    <tr>
+                        <td>{{ forloop.counter }}.</td><td>{{ app }}</td>
+                        <td>{{ mo_stats.0 }}</td><td>{{ mo_stats.1|join:", " }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>{% endif %}
+    </div>
+    <div class="sub-content">
+        <h4>Flatpaks</h4>
+        <div class="sub-content-2">
+            {% for line in flatpaks %}
+                <pre>{{ line }}</pre>
+            {% empty %}
+                <p>No flatpaks found.</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="sub-content">
+        <h4>Firefox Langpacks</h4>
+        <div class="sub-content-2">
+            {% for line in langpacks %}
+                <pre>{{ forloop.counter }}.&nbsp;{{ line }}</pre>
+            {% empty %}
+                <p>No langpacks found.</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="sub-content">
+        <h4>MO Files</h4>
+        <div class="sub-content-2">
+            {% for line in mo_files %}
+                <pre>{{ forloop.counter }}.&nbsp;{{ line }}</pre>
+            {% empty %}
+                <p>No MO files found.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

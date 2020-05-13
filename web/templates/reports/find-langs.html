@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "../base.html" %}
 
 {% block style %}
 <style>
@@ -29,6 +29,8 @@ a {
         <a href="{% url 'index' %}"><i class="fa fa-home"></i></a></small>
     </h2>
     <div class="sub-content">
+        <p>Package name, version and <code>%find_lang</code> in the 
+            <strong>install</strong> section of SPEC file(s).</p>
         {% for line in filtered_data %}
             <pre>{{ forloop.counter }}.&nbsp;{{ line }}</pre>
         {% empty %}

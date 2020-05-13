@@ -1,0 +1,17 @@
+Name                   Application ID                   Version       Branch      Installation
+Platform               org.fedoraproject.Platform                     f32         system
+Baobab                 org.gnome.Baobab                               stable      system
+GNOME Calculator       org.gnome.Calculator             3.36.0        stable      system
+Calendar               org.gnome.Calendar               3.36.0        stable      system
+GNOME Characters       org.gnome.Characters                           stable      system
+Contacts               org.gnome.Contacts               3.36          stable      system
+Evince                 org.gnome.Evince                 3.36.0        stable      system
+File Roller            org.gnome.FileRoller                           stable      system
+GNOME Logs             org.gnome.Logs                                 stable      system
+GNOME Maps             org.gnome.Maps                   3.36.1        stable      system
+GNOME Screenshot       org.gnome.Screenshot             3.36.0        stable      system
+Weather                org.gnome.Weather                3.36.1        stable      system
+GNOME Clocks           org.gnome.clocks                 3.36.0        stable      system
+Eye of GNOME           org.gnome.eog                                  stable      system
+GNOME Fonts            org.gnome.font-viewer            3.32.0        stable      system
+gedit                  org.gnome.gedit                  3.32.2        stable      system
