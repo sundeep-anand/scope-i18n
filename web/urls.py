@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.views.generic.base import TemplateView
 
 from .views import (
-    ReportsIndexPageView, SPECParseReportsView,
+    ReportsIndexPageView, SPECParseReportsView, TransPackagesReportsView,
     SBSizeCountReportsView, WSSizeCountReportsView, SRVSizeCountReportsView
 )
 
@@ -27,6 +27,7 @@ report_urls = [
     path('size-count/sb', SBSizeCountReportsView.as_view(), name="reports-size-count-sb"),
     path('size-count/ws', WSSizeCountReportsView.as_view(), name="reports-size-count-ws"),
     path('size-count/srv', SRVSizeCountReportsView.as_view(), name="reports-size-count-srv"),
+    path('trans-pkgs', TransPackagesReportsView.as_view(), name="reports-trans-pkgs"),
 ]
 
 urlpatterns = [

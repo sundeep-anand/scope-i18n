@@ -1,7 +1,7 @@
 
 import gc
 import time
-from os import walk, path, linesep
+from os import walk, path, linesep, unlink
 
 from utils.specfile import RpmSpecFile
 
@@ -13,20 +13,21 @@ class ParseTranslationData(object):
     TOTAL_SPEC_FILES = None
     SPEC_USING_FIND_LANGS = None
 
-    DELIMITER = "|"
+    DELIMITER = "§"
 
     def _write_output(self, report_type, txt):
 
         report_file = {
             'raw': 'reports/parse-output',
             'filter': 'reports/parse-filter',
+            'reduce': 'reports/parse-reduce',
             'summary': 'reports/parse-summary'
         }
 
         if not report_type:
             return
 
-        f = open(report_file.get(report_type, ''), "a+")
+        f = open(report_file[report_type], "a+")
         f.write(txt)
         f.close()
 
@@ -45,7 +46,7 @@ class ParseTranslationData(object):
             [spec_files.append(spec) for spec in filenames if spec.endswith('.spec')]
 
         starting_point = 0
-        window_size = 500
+        window_size = 1000
         end_point = window_size
 
         spec_file_packets = []
@@ -81,60 +82,74 @@ class ParseTranslationData(object):
 
     def parse_spec_file(self):
 
-        for spec_obj_2 in self.pick_spec_file():
+        for spec_obj in self.pick_spec_file():
 
             self.TOTAL_SPEC_FILES += 1
             # Pkg name and version
-            print("{0} {1}".format(spec_obj_2.Name, spec_obj_2.Version), end='')
+            print("{0} {1}".format(spec_obj.Name, spec_obj.Version), end='')
             print(self.DELIMITER, end='')
 
             self._write_output('raw', "{0} {1}".format(
-                spec_obj_2.Name, spec_obj_2.Version
+                spec_obj.Name, spec_obj.Version
             ) + self.DELIMITER)
 
             # Pkgs and Subpackages
-            # for pkg in spec_obj_2.getPackages() or []:
-            #     p_msg = "Package: " + str(pkg)
-            #     if pkg != spec_obj_2.Name:
-            #         p_msg += " (subpackage)"
-            #     print(p_msg)
-            print(" ".join(spec_obj_2.getPackages()), end='')
+            print(" ".join(spec_obj.getPackages()), end='')
             print(self.DELIMITER, end='')
 
-            self._write_output('raw', " ".join(spec_obj_2.getPackages()) + self.DELIMITER)
+            self._write_output('raw', ", ".join(spec_obj.getPackages()) + self.DELIMITER)
 
             # If there are find_langs in install section
             find_lang_str = ""
-            for i, j in spec_obj_2.section.get("install", {}).items():
+            for i, j in spec_obj.section.get("install", {}).items():
                 find_lang_lines = [x for x in j if '%find_lang' in x]
                 if find_lang_lines:
                     # print("If there is find_langs")
                     self.SPEC_USING_FIND_LANGS += 1
                     # print(i)
-                    find_lang_str += " ".join(find_lang_lines)
+                    find_lang_str += ", ".join(find_lang_lines)
             print(find_lang_str, end='')
             print(self.DELIMITER, end='')
 
             self._write_output('raw', find_lang_str + self.DELIMITER)
             if find_lang_str:
                 self._write_output('filter', "{0} {1}".format(
-                    spec_obj_2.Name, spec_obj_2.Version
+                    spec_obj.Name, spec_obj.Version
                 ) + self.DELIMITER)
                 self._write_output('filter', find_lang_str)
                 self._write_output('filter', linesep)
 
             # Pkgs which may contain MO files
-            mo_pkgs_str = ""
-            for i, j in spec_obj_2.section.get("files", {}).items():
-                mo_pkgs = [x for x in j or [] if 'lang' in x]
-                if mo_pkgs:
-                    # print("Pkgs which contain MO files")
-                    # print(i)
-                    mo_pkgs_str += " ".join(mo_pkgs)
-            print(mo_pkgs_str, end='')
-            print(self.DELIMITER, end='')
+            mo_pkgs = []
+            for spec_line in spec_obj.lines:
+                if '%files' in spec_line and '.lang' in spec_line:
+                    spec_line = spec_line.replace('%{name}', spec_obj.Name)
+                    probable_mo_package = [spec_pkg for spec_pkg in spec_obj.getPackages()
+                                           if spec_pkg in spec_line]
+                    # fallback
+                    if not probable_mo_package:
+                        str_to_b_replaced = [elm.replace(".lang", "")
+                                             for elm in spec_line.split() if '.lang' in elm]
+                        if str_to_b_replaced and len(str_to_b_replaced) == 1:
+                            spec_line = spec_line.replace(str_to_b_replaced[0], spec_obj.Name)
+                            probable_mo_package = [spec_pkg for spec_pkg in spec_obj.getPackages()
+                                                   if spec_pkg in spec_line]
+                    if probable_mo_package and \
+                       [p for p in probable_mo_package if p not in mo_pkgs]:
+                        mo_pkgs.extend(probable_mo_package)
 
-            self._write_output('raw', mo_pkgs_str + self.DELIMITER)
+            for pkg, files in spec_obj.section.get("files", {}).items():
+                [mo_pkgs.append(pkg) for file in files
+                 if '.mo' in file and pkg not in mo_pkgs]
+            print(" ".join(mo_pkgs), end='')
+            self._write_output('raw', ", ".join(mo_pkgs))
+            if mo_pkgs:
+                self._write_output('reduce', "{0} {1}".format(
+                    spec_obj.Name, spec_obj.Version
+                ) + self.DELIMITER)
+                self._write_output('reduce', find_lang_str + self.DELIMITER)
+                self._write_output('reduce', " ".join(mo_pkgs))
+                self._write_output('reduce', linesep)
 
             print("\n > Out of %d Pkgs, %d use find_lang.\n" % (
                 self.TOTAL_SPEC_FILES, self.SPEC_USING_FIND_LANGS

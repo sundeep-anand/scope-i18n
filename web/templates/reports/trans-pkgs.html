@@ -1,0 +1,68 @@
+{% extends "../base.html" %}
+
+{% block style %}
+<style>
+a:hover {
+    color:lightslategrey;
+}
+a {
+    text-decoration: none !important;
+    color: darkslategrey;
+}
+table, th, td {
+    border-top: 1px dotted lightslategrey;
+    border-bottom: 1px dotted lightslategrey;
+    border-collapse: collapse;
+    margin: 1%;
+    padding: 5px;
+}
+.sub-content {
+    margin: 1%;
+    padding: 10px;
+    max-height: 500px;
+    overflow: scroll;
+    border: 1px dotted lightgrey;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+
+{% if summary %}
+<div class="content">
+    <h2>{{ summary }}<small class="pull-right">
+        <a href="{% url 'index' %}"><i class="fa fa-home"></i></a></small>
+    </h2>
+    {% if trans_pkgs %}
+    <div class="sub-content">
+        <table>
+            <thead>
+                <tr style="color: darkgoldenrod;">
+                    <td></td><td>Application</td><td>Packages</td><td>Using <code>find_lang</code>?</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for app, pkgs, find_trans in trans_pkgs %}
+                <tr {% if not find_trans %}style="background-color:HoneyDew;"{% endif %}>
+                    <td>{{ forloop.counter }}.</td><td>{{ app }}</td>
+                    <td>{{ pkgs.split|join:", " }}</td><td>{{ find_trans }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>{% endif %}
+    <div class="sub-content">
+        <p>Package name, version; <code>%find_lang</code> 
+            in the <strong>install</strong> section; Packages</p>
+        {% for line in reduced_data_raw %}
+            <pre>{{ forloop.counter }}. {{ line }}</pre>
+        {% empty %}
+            <p>No packages found.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
