@@ -16,23 +16,22 @@
                     <li>This could also be used if we will create the locale extensions for fedora flatpaks.</li>
                 </ul>
             <h3>References</h3>
-                <a href="https://projects.engineering.redhat.com/browse/GNIN-649" target="_blank">Team JIRA</a></li> | 
                 <a href="https://teams.fedoraproject.org/project/silverblue/us/116" target="_blank">Silverblue Ticket</a> |
+                <a href="https://projects.engineering.redhat.com/browse/GNIN-649" target="_blank">Team JIRA</a></li> | 
                 <a href="https://github.com/rpm-software-management/rpm/issues/310" target="_blank">RPM Upstream</a>
         </div>
-    <h2>Investigate</h2>
+    <h2>Investigation</h2>
         <div class="sub-content">
             <ul>
-                <li>number of packages affected - see <a href="{% url 'reports-find-lang' %}">reports</a></li>
+                <li>packages may get affected <code>(using find_lang)</code> - see <a href="{% url 'reports-trans-pkg' %}">report</a></li>
                 <li>number of .mo files and their size - see reports <code>(for fedora base img)</code>: 
                     <a href="{% url 'reports-size-count-sb' %}">silverblue</a> | 
                     <a href="{% url 'reports-size-count-ws' %}">workstation</a> | 
                     <a href="{% url 'reports-size-count-srv' %}">server</a>
                 </li>
-                <li>which binary package the translations live in now - see <a href="{% url 'reports-trans-pkgs' %}">reports</a></li>
             </ul>
         </div>
-    <h2>Probable Solution/Options</h2>
+    <h2>Probable Solution</h2>
         <div class="sub-content">
             <h3>What to solve</h3>
                 <ol>

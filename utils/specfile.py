@@ -65,7 +65,20 @@ class RpmSpecFile:
                 self.Name = fd.name.split('/')[-1].rstrip('.spec')
             except Exception:
                 self.Name = "head"
-        self.lines = fd.read().splitlines()
+        
+        spec_file_text = fd.read()
+        self.lines = spec_file_text.splitlines()
+
+        # tries to expand global macros
+        try:
+            macros = [l for l in self.lines if '%global ' in l]
+            for key, val in dict([(m.split()[1], m.split()[2]) for m in macros]).items():
+                spec_file_text = spec_file_text.replace("%{" + key + "}", val)
+            self.lines = spec_file_text.splitlines()
+        except:
+            # log error; pass for now
+            pass
+        
         fd.close()
 
     def parse(self):

@@ -13,13 +13,15 @@ table, th, td {
     border-top: 1px dotted lightslategrey;
     border-bottom: 1px dotted lightslategrey;
     border-collapse: collapse;
+    /* width: 50%; */
     margin: 1%;
     padding: 5px;
+    /* white-space:nowrap; */
 }
 .sub-content {
     margin: 1%;
     padding: 10px;
-    max-height: 500px;
+    max-height: 750px;
     overflow: scroll;
     border: 1px dotted lightgrey;
 }
@@ -32,35 +34,28 @@ table, th, td {
 
 {% if summary %}
 <div class="content">
-    <h2>{{ summary }}<small class="pull-right">
+    <h2>{{ summary }} <small class="pull-right">
         <a href="{% url 'index' %}"><i class="fa fa-home"></i></a></small>
     </h2>
-    {% if trans_pkgs %}
     <div class="sub-content">
-        <table>
-            <thead>
-                <tr style="color: darkgoldenrod;">
-                    <td></td><td>Application</td><td>Packages</td><td>Using <code>find_lang</code>?</td>
-                </tr>
-            </thead>
-            <tbody>
-                {% for app, pkgs, find_trans in trans_pkgs %}
-                <tr {% if not find_trans %}style="background-color:HoneyDew;"{% endif %}>
-                    <td>{{ forloop.counter }}.</td><td>{{ app }}</td>
-                    <td>{{ pkgs.split|join:", " }}</td><td>{{ find_trans }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>{% endif %}
-    <div class="sub-content">
-        <p>Package name, version; <code>%find_lang</code> 
-            in the <strong>install</strong> section; Packages</p>
-        {% for line in reduced_data_raw %}
-            <pre>{{ forloop.counter }}. {{ line }}</pre>
-        {% empty %}
-            <p>No packages found.</p>
-        {% endfor %}
+        
+            <table>
+                <thead>
+                    <tr style="color: darkgoldenrod;">
+                        <td></td><td>SPEC file</td><td>Packages</td><td><code>find_langs</code></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pkg, trans_pkgs, trans_pkgs_flag, find_langs, find_langs_flag in trans_pkgs_stats %}
+                    <tr {% if find_langs_flag and not trans_pkgs_flag %}style="background-color: HoneyDew;"{% endif %}>
+                        <td>{{ forloop.counter }}.</td><td>{{ pkg }}</td>
+                        <td>{{ trans_pkgs.split|join:", " }}</td><td>{{ find_langs }}</td>
+                    </tr>
+                    {% empty %}
+                        <tr><td colspan="4">No packages found.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
     </div>
 </div>
 {% endif %}

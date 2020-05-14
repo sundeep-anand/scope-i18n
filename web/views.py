@@ -15,55 +15,35 @@ class ReportsIndexPageView(TemplateView):
 
 class SPECParseReportsView(TemplateView):
 
-    template_name = "reports/find-langs.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        report_summary_file = os.path.join(settings.BASE_DIR, 'reports', 'parse-summary')
-        report_filter_file = os.path.join(settings.BASE_DIR, 'reports', 'parse-filter')
-
-        with open(report_summary_file) as summary:
-            context['summary'] = summary.readline()
-
-        with open(report_filter_file) as filtered_data:
-            context['filtered_data'] = filtered_data.readlines()
-
-        return context
-
-
-class TransPackagesReportsView(TemplateView):
-
-    report_reduce_file = os.path.join(settings.BASE_DIR, 'reports', 'parse-reduce')
     template_name = "reports/trans-pkgs.html"
+    report_filter_file = os.path.join(settings.BASE_DIR, 'reports', 'parse-filter')
+    report_summary_file = os.path.join(settings.BASE_DIR, 'reports', 'parse-summary')
 
     DELIMITER = "§"
 
     def analyze_translation_pkgs(self):
 
         trans_pkgs_stats = []
-        trans_pkgs_len = 0
 
-        with open(self.report_reduce_file, 'r') as report_file:
+        with open(self.report_filter_file, 'r') as report_file:
             for row in report_file:
-                pkg, find_langs, trans_pkgs = row.split(self.DELIMITER)
+                pkg, trans_pkgs, find_langs = row.split(self.DELIMITER)
+                trans_pkgs_flag = True if trans_pkgs else False
                 find_langs_flag = True if find_langs else False
-                trans_pkgs_len += len(trans_pkgs.split())
-                trans_pkgs_stats.append(
-                    [pkg, trans_pkgs, find_langs_flag]
-                )
-        return trans_pkgs_stats, trans_pkgs_len
+
+                if "%{name}" not in pkg and "%{?cross}" not in pkg:
+                    trans_pkgs_stats.append(
+                        [pkg, trans_pkgs, trans_pkgs_flag, find_langs, find_langs_flag]
+                    )
+        return sorted(trans_pkgs_stats)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['trans_pkgs'], trans_pkgs_len = \
-            self.analyze_translation_pkgs()
 
-        context['summary'] = "{} packages contain translations".format(
-            trans_pkgs_len
-        )
-        with open(self.report_reduce_file) as reduced_data_raw:
-            context['reduced_data_raw'] = reduced_data_raw.readlines()
+        with open(self.report_summary_file) as summary:
+            context['summary'] = summary.readline()
 
+        context["trans_pkgs_stats"] = self.analyze_translation_pkgs()
         return context
 
 

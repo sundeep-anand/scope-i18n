@@ -67,7 +67,7 @@ table, th, td {
                     </tr>
                 </thead>
                 <tbody>
-                    {% for app, mo_stats in mo_file_stats.items %}
+                    {% for app, mo_stats in mo_file_stats.items|dictsort:"0.lower" %}
                     <tr>
                         <td>{{ forloop.counter }}.</td><td>{{ app }}</td>
                         <td>{{ mo_stats.0 }}</td><td>{{ mo_stats.1|join:", " }}</td>
