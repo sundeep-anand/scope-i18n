@@ -1,0 +1,95 @@
+{% extends "../base.html" %}
+
+{% block style %}
+<style>
+a:hover {
+    color:lightslategrey;
+}
+a {
+    text-decoration: none !important;
+    color: darkslategrey;
+}
+td {
+    width: 1%;
+}
+table, th, td {
+    border-top: 1px dotted lightslategrey;
+    border-bottom: 1px dotted lightslategrey;
+    border-collapse: collapse;
+    margin: 1%;
+    padding: 10px;
+    /* white-space:nowrap; */
+}
+.sub-content {
+    margin: 1%;
+    padding: 10px;
+    max-height: 750px;
+    overflow: scroll;
+    border: 1px dotted lightgrey;
+}
+.sub-summary {
+    margin: 1%;
+    padding: 2%;
+    max-height: 200px;
+    background-color: aliceblue;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+
+{% if summary %}
+<div class="content">
+    <h2>{{ summary }} <small class="pull-right">
+        <a href="{% url 'index' %}"><i class="fa fa-home"></i></a></small>
+    </h2>
+    <div class="sub-content">
+        <table>
+            <thead>
+                <tr style="color: darkgoldenrod;">
+                    <td>Type</td>
+                    <td>Description</td>
+                    <td><code>translation_packages</code></td>
+                    <td>Pros</td>
+                    <td>Cons</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for type, pkgings in trans_pkging.items %}
+                <tr>
+                    <td>{{ forloop.counter }}.</td>
+                    <td>{{ type }}</td>
+                    <td>{% if ',' in pkgings %}
+                            {% for pkging in pkgings.split %}
+                                {{ pkging }}<br/>
+                            {% endfor %}
+                        {% else %}
+                            {{ pkgings }}
+                        {% endif %}
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                {% empty %}
+                    <tr><td colspan="4">No packaging(s) found.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="sub-summary">
+        <h3>One of the Options..</h3>
+        <h5>
+            If we auto subpackage translations by language groups: <code>%{name}-langpack-%{language-id}</code> for example, 
+            one subpackage <code>%{name}-langpack-zh</code> for zh_CN, zh_TW or/and zh_HK ... we can limit number of subpackages 
+            (<i>lesser RPM metadata</i>) and need not to implement locale-mapping/fallback.. Moreover, this may enable us to 
+            tie up these sub-packages to langpacks meta-package installation (<i>and may help in flatpak locales creation too</i>)... 
+            at the most we may seek some changes in optimization in <a href="https://github.com/rpm-software-management/rpm" target="_blank">RPM</a>
+            <code>fsync-ing</code> etc.
+        </h5>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

@@ -25,17 +25,47 @@ class SPECParseReportsView(TemplateView):
 
         trans_pkgs_stats = []
 
+        main_trans_pkgs = []
+        trans_sub_pkgs = []
+
+        trans_subpkgs_count = 0
+        trans_pkgs_count = 0
+
         with open(self.report_filter_file, 'r') as report_file:
             for row in report_file:
                 pkg, trans_pkgs, find_langs = row.split(self.DELIMITER)
                 trans_pkgs_flag = True if trans_pkgs else False
                 find_langs_flag = True if find_langs else False
 
+                translation_identifiers = \
+                    ['-lang ', '-langpacks', 'translations']
+
+                for idtfr in translation_identifiers:
+                    if idtfr in pkg:
+                        main_trans_pkgs.append(pkg)
+                    sub_pkgs = trans_pkgs.split() or []
+                    for subpkg in sub_pkgs:
+                        if subpkg.endswith(idtfr.strip()):
+                            trans_sub_pkgs.append([pkg, subpkg])
+
+                trans_subpkgs = []
+                trans_pkgs_items = trans_pkgs.split() or []
+                if len(trans_pkgs_items) > 1:
+                    trans_subpkgs = trans_pkgs_items[1:]
+                    trans_pkgs = trans_pkgs_items[0]
+                    trans_subpkgs_count += len(trans_subpkgs)
+
+                if trans_pkgs:
+                    trans_pkgs_count += 1
+
                 if "%{name}" not in pkg and "%{?cross}" not in pkg:
                     trans_pkgs_stats.append(
-                        [pkg, trans_pkgs, trans_pkgs_flag, find_langs, find_langs_flag]
+                        [pkg, trans_pkgs, trans_subpkgs, trans_pkgs_flag,
+                         find_langs, find_langs_flag]
                     )
-        return sorted(trans_pkgs_stats)
+        return (sorted(trans_pkgs_stats),
+                (main_trans_pkgs, trans_sub_pkgs, len(trans_sub_pkgs) / 2),
+                trans_subpkgs_count, trans_pkgs_count)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -43,7 +73,30 @@ class SPECParseReportsView(TemplateView):
         with open(self.report_summary_file) as summary:
             context['summary'] = summary.readline()
 
-        context["trans_pkgs_stats"] = self.analyze_translation_pkgs()
+        (context["trans_pkgs_stats"], context["trans_pkgs"],
+         context["trans_subpkgs_count"], context["trans_pkgs_count"]) = \
+            self.analyze_translation_pkgs()
+        return context
+
+
+class CompTransPkgingView(TemplateView):
+
+    template_name = "reports/comp-pkg.html"
+
+    def get_trans_pkging(self):
+        return {
+            "Bundle all (status quo)": "mypkg",
+            "Single translation subpackage": "mypkg-translations",
+            "Subpackages by language code": "mypkg-translations-fr,...",
+            "Bundle main langs and subpkg rest": "mypkg, mypkg-other-translations",
+            "Combination of language subpackages and other languages subpkg (?)":
+                "mypkg-translations-fr,... mypkg-translations-other",
+        }
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['summary'] = "Comparison of translation packaging(s)"
+        context["trans_pkging"] = self.get_trans_pkging()
         return context
 
 
@@ -75,6 +128,7 @@ class SBSizeCountReportsView(TemplateView):
                     else:
                         app_stats[app][0] += 1
                         app_stats[app][1].append(locale)
+                        app_stats[app][1].sort()
                 except Exception:
                     print("In exception: " + row)
 
@@ -84,7 +138,7 @@ class SBSizeCountReportsView(TemplateView):
         mo_files = {
             "/usr/share/locale/": (10286, '362M'),
             "/var/lib/flatpak/": (175, '112K'),
-            "/sysroot/ostree/deploy/fedora/var/lib/flatpak/": (175, '112K'),
+            # "/sysroot/ostree/deploy/fedora/var/lib/flatpak/": (175, '112K'),
             "/usr/lib64/firefox/langpacks/": (107, '51M')
         }
         return mo_files

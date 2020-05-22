@@ -21,9 +21,29 @@ table, th, td {
 .sub-content {
     margin: 1%;
     padding: 10px;
-    max-height: 750px;
+    max-height: 550px;
     overflow: scroll;
     border: 1px dotted lightgrey;
+}
+.summary-content {
+    margin: 1%;
+    padding: 10px;
+    max-height: 250px;
+    overflow: scroll;
+    border: 1px dotted lightgrey;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.highlight {
+    color: darkgoldenrod;
 }
 </style>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -38,24 +58,55 @@ table, th, td {
         <a href="{% url 'index' %}"><i class="fa fa-home"></i></a></small>
     </h2>
     <div class="sub-content">
-        
-            <table>
-                <thead>
-                    <tr style="color: darkgoldenrod;">
-                        <td></td><td>SPEC file</td><td>Packages</td><td><code>find_langs</code></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for pkg, trans_pkgs, trans_pkgs_flag, find_langs, find_langs_flag in trans_pkgs_stats %}
-                    <tr {% if find_langs_flag and not trans_pkgs_flag %}style="background-color: HoneyDew;"{% endif %}>
-                        <td>{{ forloop.counter }}.</td><td>{{ pkg }}</td>
-                        <td>{{ trans_pkgs.split|join:", " }}</td><td>{{ find_langs }}</td>
-                    </tr>
-                    {% empty %}
-                        <tr><td colspan="4">No packages found.</td></tr>
+        <table>
+            <thead>
+                <tr class="highlight">
+                    <td></td><td>SPEC file</td><td>Packages ({{ trans_pkgs_count }})</td>
+                    <td>Subpackages ({{ trans_subpkgs_count }})</td><td><code>find_langs</code></td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pkg, trans_pkgs, trans_subpkgs, trans_pkgs_flag, find_langs, find_langs_flag in trans_pkgs_stats %}
+                <tr {% if find_langs_flag and not trans_pkgs_flag %}style="background-color: HoneyDew;"{% endif %}>
+                    <td>{{ forloop.counter }}.</td><td>{{ pkg }}</td>
+                    <td>{{ trans_pkgs }}</td>
+                    <td>{{ trans_subpkgs|join:", " }}</td>
+                    <td>{{ find_langs }}</td>
+                </tr>
+                {% empty %}
+                    <tr><td colspan="4">No packages found.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="summary-content">
+        {% if trans_pkgs.0 %}
+            <h4 class="highlight">Exclusive translation packages <small>({{ trans_pkgs.0|length }})</small></h4>
+            <p style="padding-left: 10px;">{{ trans_pkgs.0|join:", " }}</p>
+        {% endif %}
+        {% if trans_pkgs.1 %}
+            <h4 class="highlight">Exclusive translation sub-packages <small>({{ trans_pkgs.1|length }})</small></h4>
+            <div class="row">
+                <div class="column">
+                    {% for trans_subpkgs in trans_pkgs.1 %}
+                        {% if forloop.counter < trans_pkgs.2 %}
+                            <div style="padding-left: 10px;">
+                                <strong>{{ forloop.counter }}</strong>. {{ trans_subpkgs|join:" :: " }}
+                            </div>
+                        {% endif %}
                     {% endfor %}
-                </tbody>
-            </table>
+                </div>
+                <div class="column">
+                    {% for trans_subpkgs in trans_pkgs.1 %}
+                        {% if forloop.counter >= trans_pkgs.2 %}
+                            <div style="padding-left: 10px;">
+                                <strong>{{ forloop.counter }}</strong>. {{ trans_subpkgs|join:" :: " }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+              </div>
+        {% endif %}
     </div>
 </div>
 {% endif %}
