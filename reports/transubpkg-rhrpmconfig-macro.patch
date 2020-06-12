@@ -1,0 +1,62 @@
+diff --git a/macros b/macros
+index 0aa06ec..fb8eae9 100644
+--- a/macros
++++ b/macros
+@@ -25,6 +25,7 @@
+ %_include_gdb_index     1
+ %_debugsource_packages  1
+ %_debuginfo_subpackages 1
++%_enable_translation_subpackages 1
+ 
+ # GCC toolchain
+ %__cc_gcc gcc
+@@ -256,11 +257,13 @@ print(result)
+ 
+ %__spec_install_post\
+     %{?__debug_package:%{__debug_install_post}}\
++    %{?__translation_subpackage:%{__translation_subpackage_post}}\
+     %{__arch_install_post}\
+     %{__os_install_post}\
+ %{nil}
+ 
+ %install %{?_enable_debug_packages:%{?buildsubdir:%{debug_package}}}\
++         %{?_enable_translation_subpackages:%{?buildsubdir:%{translation_subpackage}}}\
+ %%install\
+ %{nil}
+ 
+@@ -364,3 +367,35 @@ print(result)
+ %global __find_requires /bin/sh -c "%{?__filter_req_cmd}  %{__deploop R} %{?__filter_from_req}" \
+ }
+ 
++#=================================================================================
++# ---- Translation Subpackaging
++#
++
++# Collect translations to subpackage.
++%__translation_subpackage_post   \
++    %{_rpmconfigdir}/find-lang.sh\\\
++    %{buildroot}\\\
++    %{name}\
++%{nil}
++
++# Template for translation subpackage.
++%_translation_subpackage_template \
++%package translations\
++Summary: Translation subpackage for package %{name}\
++Group: Development/Languages\
++Requires: %{name}\
++AutoReq: 0\
++AutoProv: 1\
++%description translations\
++This package provides translation files for package %{name}.\
++%files translations -f %{name}.lang\
++%{nil}
++
++# Translation Subpackage
++#
++# Use following in spec file to opt-out.
++#   %global translation_subpackage %{nil}
++#
++%translation_subpackage \
++%_translation_subpackage_template\
++%{nil}

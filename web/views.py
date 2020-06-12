@@ -6,6 +6,7 @@ from django.views.generic import (
     TemplateView, ListView, FormView, DetailView
 )
 from django.conf import settings
+from django.http import HttpResponse
 
 
 class ReportsIndexPageView(TemplateView):
@@ -215,3 +216,17 @@ class SRVSizeCountReportsView(SBSizeCountReportsView):
         context['flatpaks'] = None
 
         return context
+
+
+def RHConfigPatchReportsView(request):
+    """
+    RHConfigPatchReportsView View
+    """
+    contents = ""
+    patch_path = os.path.join(
+        settings.BASE_DIR, 'reports', 'transubpkg-rhrpmconfig-macro.patch'
+    )
+
+    with open(patch_path) as patch:
+        contents = patch.read()
+    return HttpResponse(contents, content_type="text/plain")

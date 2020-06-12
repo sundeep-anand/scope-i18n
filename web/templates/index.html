@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="content">
-    <span class="pull-right"><i style="color: lightslategrey;">Last Updated</i> May 22, 2020</span>
+    <span class="pull-right"><i style="color: lightslategrey;">Last Updated</i> Jun 12, 2020</span>
     <h1>RPM Translations subpackaging</h1>
     <h2>Problem Statement</h2>
         <div class="sub-content">
@@ -19,7 +19,8 @@
             <h3>References</h3>
                 <a href="https://teams.fedoraproject.org/project/silverblue/us/116" target="_blank">Silverblue Ticket</a> |
                 <a href="https://projects.engineering.redhat.com/browse/GNIN-649" target="_blank">Team JIRA</a></li> | 
-                <a href="https://github.com/rpm-software-management/rpm/issues/310" target="_blank">RPM Upstream</a>
+                <a href="https://github.com/rpm-software-management/rpm/issues/310" target="_blank">RPM Upstream</a> |
+                <a href="https://fedoraproject.org/wiki/Packaging:Langpacks" target="_blank">Fedora Wiki</a> 
         </div>
     <h2>Investigation</h2>
         <div class="sub-content">
@@ -40,8 +41,30 @@
                     <li>how to generate names for subpackages, on which types/names of files, which Provides/Supplements, how they would be tied to the original package where translations are coming from. In other words, what MAINPKG would be (how to automatically determine it) and what XX to use?</li>
                     <li>the support of automated subpackage generation from RPM, that is something what needs to be implemented in RPM.</li>
                 </ol>
+            <h3>Implementation <small>step wise</small></h3>
+            <ol>
+                <li>
+                    <div>
+                        <h4>Single translation subpackage per package</h4>
+                        <i>For example</i>: for a package, say <code><a href="https://src.fedoraproject.org/rpms/hello" target="_blank">hello</a></code>,
+                             a subpackage <code>hello-translations</code> will automatically be created. <small>(<i>Packager can opt-out this feature</i>)</small>
+                        <p>
+                            Quick approach could be a <a href="{% url 'reports-rh-config-patch' %}" target="_blank">patch</a> for 
+                            <a href="https://src.fedoraproject.org/rpms/redhat-rpm-config" target="_blank">redhat-rpm-config</a>.
+                            <i>Next</i> is to handle existing <code>find-lang</code> scenarios. And a round of build(s) + testing.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h4>Package translation subpackage(s) group by <code>language_id</code></h4>
+                        <i>For example</i>: there will one subpackage for <code>(zh_CN and zh_TW) or (pt_PT and PT_BR).</code>
+                    </div>
+                </li>
+            </ol>
             <h3>Use-Cases</h3>
-            <h3>Working - UX <small>Packager/End-User</small></h3>
+            <h3>Working - UX <small>Packager, End-User</small></h3>
+            <h3>Shipment</h3>
         </div>
 </div>
 {% endblock %}

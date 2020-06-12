@@ -19,7 +19,8 @@ from django.views.generic.base import TemplateView
 
 from .views import (
     ReportsIndexPageView, SPECParseReportsView, CompTransPkgingView,
-    SBSizeCountReportsView, WSSizeCountReportsView, SRVSizeCountReportsView
+    SBSizeCountReportsView, WSSizeCountReportsView, SRVSizeCountReportsView,
+    RHConfigPatchReportsView
 )
 
 report_urls = [
@@ -27,7 +28,8 @@ report_urls = [
     path('translation-packaging', CompTransPkgingView.as_view(), name="comp-trans-pkg"),
     path('size-count/sb', SBSizeCountReportsView.as_view(), name="reports-size-count-sb"),
     path('size-count/ws', WSSizeCountReportsView.as_view(), name="reports-size-count-ws"),
-    path('size-count/srv', SRVSizeCountReportsView.as_view(), name="reports-size-count-srv")
+    path('size-count/srv', SRVSizeCountReportsView.as_view(), name="reports-size-count-srv"),
+    path('patch/rh-rpm-config', RHConfigPatchReportsView, name="reports-rh-config-patch"),
 ]
 
 urlpatterns = [
