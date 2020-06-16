@@ -49,7 +49,7 @@
                         <i>For example</i>: for a package, say <code><a href="https://src.fedoraproject.org/rpms/hello" target="_blank">hello</a></code>,
                              a subpackage <code>hello-translations</code> will automatically be created. <small>(<i>Packager can opt-out this feature</i>)</small>
                         <p>
-                            Quick approach could be a <a href="{% url 'reports-rh-config-patch' %}" target="_blank">patch</a> for 
+                            Quick approach could be a <a href="https://src.fedoraproject.org/rpms/redhat-rpm-config/pull-request/94" target="_blank">patch</a> for
                             <a href="https://src.fedoraproject.org/rpms/redhat-rpm-config" target="_blank">redhat-rpm-config</a>.<br/>
                             As this creates <code>%{name}.subpkgtrans</code> file instead of <code>%{name}.lang</code>, existing <code>find-lang</code> scenarios could be handled.
                             <br/><i>Next</i> is a round of build(s) + testing.

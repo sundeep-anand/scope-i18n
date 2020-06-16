@@ -44,7 +44,7 @@ index 0aa06ec..acc36ad 100644
 +%_translation_subpackage_template \
 +%package translations\
 +Summary: Translation subpackage for package %{name}\
-+Requires: %{name}\
++Requires: %{name} = %{version}-%{release}\
 +AutoReq: 0\
 +AutoProv: 1\
 +%description translations\
