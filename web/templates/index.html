@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="content">
-    <span class="pull-right"><i style="color: lightslategrey;">Last Updated</i> Jun 15, 2020</span>
+    <span class="pull-right"><i style="color: lightslategrey;">Last Updated</i> Jun 22, 2020</span>
     <h1>RPM Translations subpackaging</h1>
     <h2>Problem Statement</h2>
         <div class="sub-content">
@@ -38,7 +38,8 @@
         <div class="sub-content">
             <h3>What to solve</h3>
                 <ol>
-                    <li>how to generate names for subpackages, on which types/names of files, which Provides/Supplements, how they would be tied to the original package where translations are coming from. In other words, what MAINPKG would be (how to automatically determine it) and what XX to use?</li>
+                    <li>how to generate names for subpackages, on which types/names of files, which Provides/Supplements, how they would be tied to the original package where translations are coming from.<br/>
+                        In other words, what MAINPKG would be (how to automatically determine it) and what XX to use?</li>
                     <li>the support of automated subpackage generation from RPM, that is something what needs to be implemented in RPM.</li>
                 </ol>
             <h3>Implementation <small>step wise</small></h3>
@@ -50,9 +51,14 @@
                              a subpackage <code>hello-translations</code> will automatically be created. <small>(<i>Packager can opt-out this feature</i>)</small>
                         <p>
                             Quick approach could be a <a href="https://src.fedoraproject.org/rpms/redhat-rpm-config/pull-request/94" target="_blank">patch</a> for
-                            <a href="https://src.fedoraproject.org/rpms/redhat-rpm-config" target="_blank">redhat-rpm-config</a>.<br/>
-                            As this creates <code>%{name}.subpkgtrans</code> file instead of <code>%{name}.lang</code>, existing <code>find-lang</code> scenarios could be handled.
-                            <br/><i>Next</i> is a round of build(s) + testing.
+                            <a href="https://src.fedoraproject.org/rpms/redhat-rpm-config" target="_blank">redhat-rpm-config</a>.
+                            As this creates <code>%{name}.subpkgtrans</code> file instead of <code>%{name}.lang</code>, existing <code>find-lang</code>
+                            scenarios could be handled. <br/>However, there is a limitation around handling <i>no translations found</i> scenario.<br/>
+                        </p>
+                        <p>
+                            Another approach could be to implement this in <a href="https://github.com/rpm-software-management/rpm" target="_blank">rpm</a>
+                            itself. Hence trying to <a href="https://github.com/rpm-software-management/rpm/issues/1276" target="_blank">discuss</a> this upstream.
+                            <i>Next</i> is a round of build(s) + testing.
                         </p>
                     </div>
                 </li>
