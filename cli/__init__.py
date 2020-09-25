@@ -3,6 +3,7 @@ import click
 
 from cli.version import version
 from cli.parse import parse
+from cli.find import find
 
 APP_VERSION = "0.1.0"
 
@@ -23,10 +24,11 @@ class AppContext(object):
 @click.pass_context
 def entry_point(ctx):
     """
-    RPM Translation Subpackaging CLI
+    Scope i18n CLI
     """
     ctx.obj = AppContext()
 
 
 entry_point.add_command(version)
 entry_point.add_command(parse)
+entry_point.add_command(find)

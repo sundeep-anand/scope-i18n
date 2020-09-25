@@ -1,8 +1,8 @@
-# RPM Translation Subpackaging
+# Scope i18n
 
-This repo contains scripts to analyze packages and their SPECs for translation data. <br/>Also, web and cmd-line interfaces.
+This repo contains scripts to analyze packages and their SPECs for i18n aspects. <br/>It also has web and cmd-line interfaces.
 
-Run cli `./trans-subpkg <sub-command>`
+Run cli `./scope <sub-command>`
 
 Run web `make web`
 

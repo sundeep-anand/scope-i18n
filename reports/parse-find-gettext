@@ -1,0 +1,1373 @@
+pacman§BuildRequires:  gettext-devel
+libtranslate§BuildRequires: pkgconfig >= 1:0.8, gettext, intltool, libtool
+ddccontrol-db§BuildRequires:    gettext, gettext-devel, libtool, intltool, perl(XML::Parser)
+wingpanel-indicator-datetime§BuildRequires:  gettext
+gnome-mime-data§BuildRequires: gettext
+fcitx-m17n§BuildRequires:	cmake, fcitx-devel, gettext, intltool, m17n-lib-devel
+xfce4-verve-plugin§BuildRequires:	libxml2-devel, gettext, intltool, perl(XML::Parser)
+xmms§BuildRequires:  gettext-devel
+kbackup§BuildRequires:  gettext
+orca§BuildRequires:  gettext
+cantata§BuildRequires: gettext
+ecryptfs-utils§BuildRequires: automake autoconf libtool glib2-devel gettext-devel perl-podlators libattr-devel|Requires: kernel-modules, keyutils, cryptsetup-luks, util-linux, gettext
+mbox-importer§BuildRequires: gettext
+steghide§BuildRequires: gettext-devel, libtool
+cura§BuildRequires:  gettext
+xfmpc§BuildRequires:  gettext
+php-horde-Horde-Nls§BuildRequires:  gettext
+systemtap§BuildRequires: gettext-devel
+gtatool§BuildRequires: gettext-devel
+gnome-tetravex§BuildRequires:  gettext
+gstreamer1-plugins-bad-free§BuildRequires:  gettext-devel
+gst-entrans§BuildRequires:  gettext-devel libtool
+tilp2§BuildRequires:  glib2-devel, pkgconfig, bison, flex, texinfo, groff, xdg-utils, gettext|BuildRequires:  autoconf, automake, gettext-devel, libtool
+tortoisehg§BuildRequires:  python3-devel, gettext, python3-sphinx, python3-qt5, desktop-file-utils, libappstream-glib
+nudoku§BuildRequires:  gettext-devel
+php-horde-Horde-Cli§BuildRequires:  gettext
+backintime§BuildRequires:    gettext
+php-horde-Horde-Browser§BuildRequires:  gettext
+gnome-nibbles§BuildRequires:  gettext
+freedroidrpg§BuildRequires:  gettext
+mcabber§BuildRequires:  gettext-devel
+php-horde-Horde-Imsp§BuildRequires:  gettext
+switchboard-plug-networking§BuildRequires:  gettext
+gnome-video-arcade§BuildRequires: gettext
+tar§BuildRequires: autoconf automake texinfo gettext libacl-devel
+snapd-glib§BuildRequires:  gettext
+anaconda§BuildRequires: gettext-devel >= %{gettextver}
+libreport§BuildRequires: gettext
+kdissert§BuildRequires:  gettext
+evolution-rspam§BuildRequires: gettext, evolution-devel, perl(XML::Parser), intltool, GConf2-devel
+popt§BuildRequires:	gcc gettext
+prusa-slicer§BuildRequires:  gettext
+gutenprint§BuildRequires:  gettext-devel,pkgconfig
+php-horde-turba§BuildRequires:  gettext
+php-horde-Horde-Date§BuildRequires:  gettext
+pv§BuildRequires: gettext
+gnome-clocks§BuildRequires:  gettext
+kblocks§BuildRequires: gettext
+cheese§BuildRequires:  gettext
+pyhoca-gui§BuildRequires:  gettext
+coreutils§BuildRequires: gettext-devel
+evolution-mapi§BuildRequires: gettext
+bout++§BuildRequires:  gettext-devel
+openconnect§BuildRequires:	autoconf automake libtool gettext pkgconfig(liblz4)
+viewnior§BuildRequires:  gettext
+vdr-skinsoppalusikka§BuildRequires:  vdr-devel >= 1.7.21 gettext
+sugar-yupana§BuildRequires:	python2 sugar-toolkit-gtk3 gettext
+ganyremote§BuildRequires: gcc, desktop-file-utils, gettext-devel
+gtkhash§BuildRequires:  gettext
+meson§BuildRequires:  gettext
+php-horde-Horde-Translation§BuildRequires:  gettext
+homebank§BuildRequires:  atk-devel cairo-devel desktop-file-utils gettext gtk3-devel
+kdevelop-python§BuildRequires:  gettext
+nitrogen§BuildRequires:  gettext|BuildRequires:  gettext-devel
+akonadi-calendar-tools§BuildRequires: gettext
+kover§BuildRequires: cmake, gettext
+gtkspell3§BuildRequires:  gettext
+libticables2§BuildRequires:  glib2-devel, pkgconfig, libusb1-devel, tfdocgen, gettext|BuildRequires:  autoconf, automake, libtool, gettext-devel
+sugar-abacus§BuildRequires:  gettext
+transmission§BuildRequires:  gettext intltool
+mingw-p11-kit§BuildRequires:  gettext
+d-feet§BuildRequires: gettext
+mingw-hunspell§BuildRequires: gettext
+gnome-klotski§BuildRequires:  gettext
+libgda§BuildRequires:    gtk-doc intltool gettext flex bison perl(XML::Parser)
+ladspa-swh-plugins§BuildRequires:  gettext-devel
+enscript§BuildRequires: autoconf, automake, gettext|BuildRequires: gettext-devel
+sugar-calculator§BuildRequires:  python3 gettext python3-devel sugar-toolkit-gtk3
+rpm§BuildRequires: gettext-devel
+cups-filters§BuildRequires: gettext-devel
+sugar-locosugar§BuildRequires:  python3-devel python3 sugar-toolkit-gtk3 gettext
+partclone§BuildRequires:  gettext-devel
+feedreader§BuildRequires:  gettext
+pantheon-agent-polkit§BuildRequires:  gettext
+kiten§BuildRequires: gettext
+ardour6§BuildRequires:  gettext
+switchdesk§BuildRequires: gettext
+gcc§BuildRequires: zlib-devel, gettext, dejagnu, bison, flex, sharutils
+xfconf§BuildRequires:  gettext
+udisks2§BuildRequires: gettext-devel
+konversation§BuildRequires: gettext
+libesedb§BuildRequires:  gettext-devel
+dovecot§BuildRequires: gettext-devel
+pcmanx-gtk2§BuildRequires:  desktop-file-utils gettext
+pslib§BuildRequires:  gettext
+gnome-sudoku§BuildRequires:  gettext-devel
+efl§BuildRequires:	ninja-build meson gettext-devel mesa-libGLES-devel
+switchboard-plug-printers§BuildRequires:  gettext
+po4a§BuildRequires: gettext|Requires: gettext
+gtk-gnutella§BuildRequires: libxml2-devel, byacc, groff, gettext
+gnome-backgrounds§BuildRequires: gettext
+katomic§BuildRequires: gettext
+zaz§BuildRequires:  gettext
+xfce4-smartbookmark-plugin§BuildRequires:  gettext
+langpacks-install§BuildRequires:  gettext-devel
+pidgin-chime§BuildRequires:  gettext
+elementary-capnet-assist§BuildRequires:  gettext
+rrdtool§BuildRequires: gettext, libxml2-devel, systemd
+nagios-plugins§BuildRequires: gettext
+WoeUSB§BuildRequires:  gettext
+linsmith§BuildRequires:  desktop-file-utils gettext libgnomeui-devel
+mono§BuildRequires:  gettext-devel
+gnome-shell-extension-pomodoro§BuildRequires:  gettext
+mutter§BuildRequires: gtk-doc gnome-common gettext-devel git
+killbots§BuildRequires: gettext
+sugar-fototoon§BuildRequires:  python3-devel sugar-toolkit-gtk3 gettext
+fcitx5-qt§BuildRequires:  gettext
+poxml§BuildRequires: gettext-devel
+libmicrohttpd§BuildRequires:  autoconf, automake, libtool, gettext-devel
+fntsample§BuildRequires:  gettext-devel perl-generators unicode-ucd
+pcsxr§BuildRequires:  gettext
+warmux§BuildRequires:  gettext libxml++-devel desktop-file-utils
+fcitx-cloudpinyin§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libcurl-devel, pkgconfig
+p11-kit§BuildRequires:  gettext
+mingw-glib2§BuildRequires:  gettext
+okteta§BuildRequires: gettext
+gnome-builder§BuildRequires:  gettext
+grilo§BuildRequires:  gettext
+xfce4-diskperf-plugin§BuildRequires:  gettext
+sos§BuildRequires: gettext
+gnome-control-center§BuildRequires:  gettext
+php-horde-Horde-LoginTasks§BuildRequires:  gettext
+file-roller§BuildRequires:  gettext
+gnutls§BuildRequires: p11-kit-devel >= 0.21.3, gettext-devel
+newsboat§BuildRequires: gettext
+elementary-notifications§BuildRequires:  gettext
+lpairs§BuildRequires:  gettext
+php-horde-Horde-ListHeaders§BuildRequires:  gettext
+xfsdump§BuildRequires: libtool, gettext, gawk
+gedit-latex§BuildRequires:  gettext
+devilspie2§BuildRequires:  gettext
+xfce4-panel§BuildRequires:  gettext
+lxshortcut§BuildRequires:  gettext
+php-horde-Horde-Alarm§BuildRequires:  gettext
+kbruch§BuildRequires: gettext
+libgphoto2§BuildRequires: autoconf automake libtool gettext-devel
+gigolo§BuildRequires:  gettext
+httping§BuildRequires:  gettext
+axel§BuildRequires: gettext-devel
+xmlsec1§BuildRequires: gettext-devel
+system-switch-mail§BuildRequires: gettext
+scim-pinyin§BuildRequires:  scim-devel, gtk2-devel, gettext, gettext-devel, autoconf, automake,libtool
+kmail§BuildRequires: gettext
+knemo§BuildRequires:    gettext
+libsoup§BuildRequires: gettext
+findutils§BuildRequires: gettext-devel
+libzypp§BuildRequires:  gettext
+grsync§BuildRequires:  gtk2-devel desktop-file-utils gettext perl(XML::Parser)
+mercurial§BuildRequires: emacs-nox emacs-el pkgconfig gettext python3-docutils
+diction§BuildRequires:  gettext
+prewikka§BuildRequires:  gettext
+mtpaint§BuildRequires: gettext
+linkchecker§BuildRequires:  gettext
+sugar-imageviewer§BuildRequires: gettext
+yapet§BuildRequires:  gettext
+xdg-desktop-portal-gtk§BuildRequires:  gettext
+sudo§BuildRequires: gettext
+centerim§BuildRequires:  gettext-devel
+util-linux§BuildRequires: gettext-devel
+ktp-auth-handler§BuildRequires:  gettext
+camorama§BuildRequires:  gettext-devel libv4l-devel gtk3-devel cairo-devel
+sympy§BuildRequires:  gettext
+sakura§BuildRequires:  cmake desktop-file-utils gettext /usr/bin/pod2man
+%{target}-gcc§BuildRequires:  gettext-devel autoconf automake
+gala§BuildRequires:  gettext
+bash§BuildRequires: autoconf, gettext
+mingw-osinfo-db-tools§BuildRequires: gettext
+radcli§#BuildRequires: libtool, automake, autoconf, gettext-devel
+gnome-shell-extension-system-monitor-applet§BuildRequires:  gettext
+libpwquality§BuildRequires: gettext
+kguitar§BuildRequires:	  gettext
+mingw-poppler§BuildRequires: gettext-devel
+extractpdfmark§BuildRequires:  gettext-devel
+fish§BuildRequires:  gettext
+kdiff3§BuildRequires:  gettext
+qemu§BuildRequires: gettext
+gimp-lqr-plugin§BuildRequires:  gettext
+inkscape§BuildRequires:  gettext
+ModemManager§BuildRequires: gettext-devel >= 0.19.8
+antimicrox§BuildRequires:  gettext
+konsole5§BuildRequires: gettext
+gnulib§Requires: gettext-devel
+php-horde-Horde-Imap-Client§BuildRequires:  gettext
+kaddressbook§BuildRequires: gettext
+epiphany§BuildRequires: gettext-devel
+php-horde-Horde-Compress§BuildRequires:  gettext
+libtifiles2§BuildRequires:  glib2-devel, zlib-devel, pkgconfig, libticonv-devel, tfdocgen, libarchive-devel, gettext|BuildRequires:  autoconf, automake, libtool, gettext-devel
+libglade2§BuildRequires: gettext-devel
+shadow-utils§BuildRequires: autoconf, automake, libtool, gettext-devel
+libpst§BuildRequires:      ImageMagick gd-devel zlib-devel boost-devel libgsf-devel gettext-devel|Requires:           ImageMagick%{?_isa} libgsf gettext
+rpminspect§BuildRequires:  gettext-devel|Requires:       gettext
+xoreos-tools§BuildRequires:  libtool, gettext-devel, autoconf, automake
+poedit§Requires:       gettext
+mingw-libglade2§BuildRequires:  gettext
+gnome-todo§BuildRequires:  gettext
+typespeed§BuildRequires: ncurses-devel gettext desktop-file-utils
+byobu§Requires:	screen, newt, gettext, tmux, python3-newt
+pim-data-exporter§BuildRequires: gettext
+zvbi§BuildRequires:      gettext >= 0.16.1
+gentoo§BuildRequires:  gettext
+xiphos§BuildRequires:  gettext
+pam§BuildRequires: perl-interpreter, pkgconfig, gettext-devel
+pantheon-agent-geoclue2§BuildRequires:  gettext
+libiptcdata§BuildRequires:  gettext|BuildRequires:  gettext-devel
+make§BuildRequires: autoconf, automake, gettext-devel
+gpredict§BuildRequires: gettext
+kdelibs§BuildRequires: gettext-devel
+xfce4-cpugraph-plugin§BuildRequires:  gettext
+k4dirstat§BuildRequires: gettext
+gnome-video-effects§BuildRequires:  gettext
+sugar-measure§BuildRequires:  gettext
+tumbler§BuildRequires:  gettext
+widelands§BuildRequires: gettext
+badwolf§BuildRequires:  gettext
+gnurobbo§BuildRequires:  gettext
+gnupg1§BuildRequires: openldap-devel, readline-devel, zlib-devel, gettext-devel
+sugar-flip§BuildRequires:  gettext
+gimp-separate+§BuildRequires: gettext
+gnome-terminal§BuildRequires: gettext-devel >= 0.19.8
+freedink-dfarc§BuildRequires:	bzip2, wxWidgets-devel >= 3, intltool, gettext
+shotwell§BuildRequires:  gettext
+subversion§BuildRequires: swig >= 1.3.24, gettext
+setroubleshoot-plugins§BuildRequires: intltool gettext python3-devel
+kbrickbuster§BuildRequires: gettext
+php-horde-Horde-Vfs§BuildRequires:  gettext
+sugar-write§BuildRequires: gettext
+goocanvas2§BuildRequires:  gettext, pkgconfig
+apt§BuildRequires:  gettext >= 0.19
+dnf§BuildRequires:  gettext
+granatier§BuildRequires: gettext
+giac§BuildRequires: gettext-devel
+xfdesktop§BuildRequires:  gettext
+thunar-vcs-plugin§BuildRequires:  gettext, intltool
+gnome-calendar§BuildRequires:  gettext
+compat-guile18§BuildRequires: gettext-devel
+automake§BuildRequires: gettext-devel
+xfce4-systemload-plugin§BuildRequires:  gettext
+translate-toolkit§Requires:       gettext
+xlog§BuildRequires: gettext-devel
+gstreamer1-plugins-ugly-free§BuildRequires:  gettext-devel
+libemu§BuildRequires:  gettext-devel
+%{goname}§Requires:       gettext-devel}|BuildRequires:  gettext-devel
+nohang§BuildRequires: gettext
+gdk-pixbuf2§BuildRequires:  gettext
+libappstream-glib§BuildRequires: gettext
+quitcount§BuildRequires:  gettext
+switchboard-plug-sharing§BuildRequires:  gettext
+gtkpod§BuildRequires:  gettext
+nano§BuildRequires:   gettext-devel
+gupnp-tools§BuildRequires: gettext
+dh-autoreconf§Requires:       gettext-devel
+xfce4-fsguard-plugin§BuildRequires:  gettext
+pcsc-lite§BuildRequires:  gettext-devel
+php-horde-Horde-Kolab-Storage§BuildRequires:  gettext
+elementary-shortcut-overlay§BuildRequires:  gettext
+at-spi2-core§BuildRequires:  gettext
+compiz§BuildRequires: gettext
+rsibreak§BuildRequires:  gettext
+meld§BuildRequires:  gettext
+gimp-wavelet-denoise-plugin§BuildRequires:  gettext
+vdr§BuildRequires:  gettext|Requires:       gettext
+gtksourceview2§BuildRequires: gettext
+fcitx5-kkc§BuildRequires:  gettext
+kdelibs3§BuildRequires: gettext
+cpu-x§BuildRequires:  gettext-devel
+wingpanel-indicator-bluetooth§BuildRequires:  gettext
+parley§BuildRequires: gettext
+denemo§BuildRequires: gettext libxml2-devel fftw-devel desktop-file-utils
+stardict§BuildRequires: gettext
+gfm§BuildRequires:  groff, gettext, libXinerama-devel, libappstream-glib|BuildRequires:  desktop-file-utils, dconf, libticalcs2-devel, gettext|BuildRequires:  autoconf, automake, libtool, gettext-devel
+setroubleshoot§BuildRequires: intltool gettext python3 python3-devel|BuildRequires: intltool gettext python3
+picard§BuildRequires:  gettext
+rifiuti2§BuildRequires:  gettext
+s390utils§BuildRequires:  gettext
+xfce4-screenshooter§BuildRequires:  gettext
+quota§BuildRequires:  gettext-devel
+xfce4-mailwatch-plugin§BuildRequires:  gettext
+tracer§BuildRequires:  gettext
+audacity§BuildRequires: gettext-devel|BuildRequires: gettext
+krecipes§BuildRequires:  gettext
+dialog§BuildRequires: ncurses-devel gcc gettext findutils libtool gnupg2
+modem-manager-gui§BuildRequires: gettext
+upower§BuildRequires:  gettext|BuildRequires:  gettext-devel
+tuxpaint-stamps§BuildRequires:  gettext python3-devel
+dconf-editor§BuildRequires:  gettext
+xfce4-session§BuildRequires:  gettext
+ccsm§BuildRequires:  gettext
+tracker§BuildRequires:  gettext
+colobot§BuildRequires: gettext-devel >= 0.18
+fcitx-hangul§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libhangul-devel
+GConf2§BuildRequires: gettext
+libcanberra§BuildRequires: gettext-devel
+harmonyseq§BuildRequires: autoconf automake gettext-devel
+springlobby§BuildRequires:  gettext
+alpine§BuildRequires: gettext
+krb5-auth-dialog§BuildRequires: perl(XML::Parser), gettext
+gsignond§BuildRequires:  gettext
+gnome-multi-writer§BuildRequires: gettext
+xfce4-genmon-plugin§BuildRequires:  gettext
+gkrellm§BuildRequires:  gtk2-devel openssl-devel libSM-devel desktop-file-utils gettext
+gimp§BuildRequires:  gettext >= 0.19
+switchboard-plug-a11y§BuildRequires:  gettext
+fgrun§BuildRequires:  gettext boost-devel desktop-file-utils
+sympa§BuildRequires: gettext|BuildRequires: autoconf, automake, gettext-devel
+celestia§BuildRequires:  gettext-devel
+grhino§BuildRequires:  gettext
+compat-gdbm§BuildRequires: gettext
+mediawriter§BuildRequires:  gettext
+lxinput§BuildRequires:  gettext
+libgpod§BuildRequires: gettext
+geoclue2§BuildRequires:  gettext
+fwupd§BuildRequires: gettext
+kflickr§BuildRequires:	desktop-file-utils, gettext, cmake
+mailnag§BuildRequires:  gettext
+kdevelop§BuildRequires:  gettext
+accerciser§BuildRequires:  gettext
+pinball§BuildRequires:  gettext-devel
+kalarm§BuildRequires: gettext
+libgnome§BuildRequires:  gettext
+mingw-libgpg-error§BuildRequires:  gettext|BuildRequires:  libtool autoconf automake gettext-devel
+gnome-power-manager§BuildRequires:  gettext
+kdump-anaconda-addon§BuildRequires: intltool gettext
+ufw§BuildRequires:  gettext
+switchboard-plug-about§BuildRequires:  gettext
+php-horde-Horde-Rpc§BuildRequires:  gettext
+dos2unix§BuildRequires: gettext
+clutter§BuildRequires: gettext
+wesnoth§BuildRequires:  gettext
+xfce4-xkb-plugin§BuildRequires:  gettext
+gmpc§BuildRequires:  gettext, gnome-vfs2-devel, desktop-file-utils
+python-sphinx§BuildRequires: gettext
+libzapojit§BuildRequires:  gettext
+switchboard§BuildRequires:  gettext
+libgpg-error§BuildRequires: gawk, gettext, autoconf, automake, gettext-devel, libtool|BuildRequires: gettext-autopoint
+publican§BuildRequires:  gettext
+emelfm2§BuildRequires:  gettext
+gnome-shell-extension-bubblemail§BuildRequires:  gettext
+libwnck§BuildRequires:  gettext
+vips§BuildRequires:	pkgconfig gettext
+libgnomecanvas§BuildRequires: libtool gettext
+sugar-nutrition§BuildRequires:  python3 gettext python3-devel sugar-toolkit-gtk3
+gnome-shell-extension-gsconnect§BuildRequires:  gettext
+gnome-network-displays§BuildRequires:  gettext
+xfce4-mount-plugin§BuildRequires:  gettext
+gnome-abrt§BuildRequires: gettext
+hugin§BuildRequires: libpng-devel gettext-devel wxGTK3-devel boost-devel freeglut-devel
+redshift§BuildRequires: gettext-devel
+switchboard-plug-pantheon-shell§BuildRequires:  gettext
+ksig§BuildRequires:  gettext
+tuxpaint§BuildRequires:  gettext
+gcin§BuildRequires:     gettext
+php-horde-Horde-Crypt§BuildRequires:  gettext
+ibus-chewing§BuildRequires:  gettext|Requires:       gettext
+php-horde-Horde-Token§BuildRequires:  gettext
+variety§BuildRequires:  gettext
+kmid2§BuildRequires:  gettext
+NetworkManager-openconnect§BuildRequires: intltool gettext libtool
+five-or-more§BuildRequires:  gettext
+libpaper§BuildRequires:	libtool, gettext, gawk
+needrestart§BuildRequires:     gettext
+php-horde-imp§BuildRequires:  gettext
+php-horde-Horde-Image§BuildRequires:  gettext
+gtkhtml3§BuildRequires: gettext
+wget§BuildRequires: gnutls-devel, pkgconfig, texinfo, gettext, autoconf, libidn2-devel, libuuid-devel, perl-podlators, libpsl-devel, libmetalink-devel, gpgme-devel, gcc, zlib-devel
+rsvndump§BuildRequires:  gettext
+php-horde-ingo§BuildRequires:  gettext
+elementary-greeter§BuildRequires:  gettext
+gnome-gmail§BuildRequires:  gettext
+kvirc§BuildRequires:    gettext
+xen§BuildRequires: gettext
+template-glib§BuildRequires:  gettext
+gdbm§BuildRequires: gettext
+kgamma§BuildRequires: gettext
+intltool§Requires: gettext-devel|BuildRequires: gettext
+elementary-terminal§BuildRequires:  gettext
+kgraphviewer§BuildRequires:  gettext
+geany§BuildRequires: desktop-file-utils, gettext, pango-devel, intltool
+atk§BuildRequires: gettext
+gnome-keyring§BuildRequires: gettext
+khangman§BuildRequires: gettext
+gimp-help§BuildRequires: gettext
+fcitx-qt5§BuildRequires:  gettext-devel
+xfce4-cellmodem-plugin§BuildRequires:  gettext, intltool
+php-horde-Horde-Mime-Viewer§BuildRequires:  gettext
+smartmontools§BuildRequires:	gcc-c++ readline-devel ncurses-devel automake util-linux groff gettext
+mutt§BuildRequires: ncurses-devel, gettext, automake
+sugar-physics§BuildRequires:  gettext
+gnome-chemistry-utils§BuildRequires:  gettext
+libmp4v2§BuildRequires: autoconf automake gettext-devel libtool texinfo svn
+sequeler§BuildRequires:  gettext
+gwenhywfar§BuildRequires: gnutls-devel gettext libgcrypt-devel openssl-devel
+%{?cross}binutils%{?_with_debug:-debug}§BuildRequires: gettext, flex, zlib-devel
+perl-gettext§BuildRequires:  gettext
+ibus-unikey§BuildRequires: gettext
+lynx§BuildRequires: gettext
+kbd§BuildRequires:  gcc, bison, flex, gettext, pam-devel, check-devel, automake
+gstreamer1§BuildRequires:  gettext
+webkit2-sharp§BuildRequires:  gettext
+xfce4-kbdleds-plugin§BuildRequires:  gettext
+gnome-disk-utility§BuildRequires:  gettext
+renameutils§BuildRequires:  gettext
+kteatime§BuildRequires: gettext
+usermode§BuildRequires: desktop-file-utils, gettext, glib2-devel, gtk2-devel, intltool
+libguestfs§BuildRequires: autoconf, automake, libtool, gettext-devel
+sugar-paint§BuildRequires: gettext
+remmina§BuildRequires: gettext
+lyx§BuildRequires: gettext
+sugar-moon§BuildRequires: gettext
+net-tools§BuildRequires: gettext, libselinux
+gtk2-engines§BuildRequires:  gettext
+elementary-videos§BuildRequires:  gettext
+NetworkManager-vpnc§BuildRequires: intltool gettext
+pgmodeler§BuildRequires:    desktop-file-utils, gettext, qt5-qtsvg-devel
+cura-lulzbot§BuildRequires:  gettext
+fcitx-kkc§BuildRequires:	cmake, gettext, intltool
+metacity§BuildRequires: autoconf, automake, gettext-devel, libtool, gnome-common
+libdbusmenu§BuildRequires:  gettext
+dcraw§BuildRequires: gettext
+m17n-lib§BuildRequires:  autoconf gettext-devel
+mingw-wxWidgets§BuildRequires: gettext
+libpq§BuildRequires: gettext
+elementary-icon-theme§BuildRequires:  gettext
+tigervnc§BuildRequires:  libX11-devel, automake, autoconf, libtool, gettext, gettext-autopoint
+lxappearance-obconf§BuildRequires:  gettext
+kf5-libkdcraw§BuildRequires: gettext
+fcitx-skk§BuildRequires:	cmake, gettext, intltool
+kf5-kipi-plugins§BuildRequires: gettext
+libvncserver§BuildRequires:  gettext-devel
+zypper§BuildRequires:  gettext-devel
+gnome-color-manager§BuildRequires: gettext
+libidn1.34§BuildRequires: gettext gettext-devel
+libidn§BuildRequires: gettext gettext-devel
+fcitx-table-extra§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libtool, fcitx
+mingw-atk§BuildRequires:  gettext
+libxfce4ui§BuildRequires:  gettext
+wine§BuildRequires:  gettext-devel
+fcitx5-rime§BuildRequires:  gettext
+grep§BuildRequires: pcre-devel >= 3.9-10, texinfo, gettext
+pcb§BuildRequires:  cups, tetex-latex, libICE-devel, desktop-file-utils, intltool, gettext-devel
+sugar-chat§BuildRequires: gettext
+opendbx§BuildRequires:  doxygen, docbook2X, gettext
+xfce4-time-out-plugin§BuildRequires:  gettext, intltool
+scim-anthy§BuildRequires:  anthy-devel >= 6700b-1 gettext-devel
+qodem§BuildRequires:  gettext
+psmisc§BuildRequires: gettext
+kdenetwork-filesharing§BuildRequires: gettext
+leafpad§BuildRequires:  gettext
+switchboard-plug-sound§BuildRequires:  gettext
+paprefs§BuildRequires:  gettext
+step§BuildRequires: gettext
+malcontent§BuildRequires:  gettext
+gspell§BuildRequires:  gettext
+cracklib§BuildRequires: words, gettext|BuildRequires: gettext-autopoint
+kio_mtp§BuildRequires:  gettext
+fmit§BuildRequires: gettext
+wingpanel-indicator-power§BuildRequires:  gettext
+tcpreen§BuildRequires:  gettext
+gtkterm§BuildRequires:  gettext-devel
+kernel-tools§BuildRequires: pciutils-devel gettext ncurses-devel
+libgnomekbd§BuildRequires:  gettext
+l3afpad§BuildRequires:  gtk3-devel, intltool, gettext, desktop-file-utils
+k3guitune§BuildRequires:  gettext
+kapman§BuildRequires: gettext
+blivet-gui§BuildRequires: gettext >= 0.18.3|Requires: gettext
+openclonk§BuildRequires:  gettext
+shared-mime-info§BuildRequires:  gettext
+knetwalk§BuildRequires: gettext
+php-horde-Horde-Idna§BuildRequires:  gettext
+electrum§BuildRequires:  gettext
+initscripts§BuildRequires:    gettext
+verbiste§BuildRequires:  gettext
+eog§BuildRequires: gettext
+cgit§BuildRequires:  gettext
+kbounce§BuildRequires: gettext
+elementary-theme§BuildRequires:  gettext
+switchboard-plug-applications§BuildRequires:  gettext
+csound§BuildRequires: gettext-devel
+pykickstart§BuildRequires: gettext
+scanmem§BuildRequires:  gettext
+mingw-gtk2§BuildRequires:  gettext
+tomoe-gtk§BuildRequires:  gettext
+kblackbox§BuildRequires: gettext
+kdepim-runtime§BuildRequires:  gettext
+xfce4-sensors-plugin§BuildRequires:  gettext
+wingpanel-indicator-network§BuildRequires:  gettext
+arandr§BuildRequires:  gettext
+gnome-shell-extension-netspeed§BuildRequires:  gettext
+kig§BuildRequires: gettext
+mingw-gtk-vnc§BuildRequires: gettext
+gtkspell§BuildRequires: gettext
+bleachbit§BuildRequires: gettext
+bless§BuildRequires: gettext-devel
+libwnck3§BuildRequires: gettext
+yp-tools§BuildRequires: autoconf, automake, gettext-devel, libtool, libtirpc-devel, libnsl2-devel
+xarchiver§BuildRequires:  gtk2-devel, libxml2-devel, gettext, desktop-file-utils
+mednafen§BuildRequires:  gettext
+kbibtex§BuildRequires:  cmake qt5-qtbase-devel desktop-file-utils gettext-devel
+dc3dd§BuildRequires:  gettext|BuildRequires:  gettext-devel
+setzer§BuildRequires:  gettext
+geocode-glib§BuildRequires:  gettext
+ucview§BuildRequires:    intltool, /usr/bin/perl, perl(XML::Parser), gettext, GConf2-devel
+rygel§BuildRequires: gettext
+virt-top§BuildRequires:  gettext
+rapidsvn§BuildRequires:  gettext
+syncevolution§BuildRequires: gettext
+gnome-maps§BuildRequires:  gettext
+gssntlmssp§BuildRequires: gettext-devel
+strawberry§BuildRequires:  gettext
+znc§BuildRequires:  gettext-devel
+lightsoff§BuildRequires:  gettext
+etherape§BuildRequires:  gettext, desktop-file-utils, itstool
+a2ps§BuildRequires: gettext, bison
+debconf§BuildRequires:  gettext >= 0.13
+libdnf§BuildRequires:  gettext
+ibus-table-extraphrase§BuildRequires:  gettext-devel >= 0.17, automake >= 1.10.2
+gnome-calculator§BuildRequires:  gettext
+libpsl§BuildRequires:  gettext-devel
+glibc§BuildRequires: audit-libs-devel >= 1.1.3, sed >= 3.95, libcap-devel, gettext
+gnome-doc-utils§BuildRequires: gettext
+ufraw§BuildRequires: gettext
+kontact§BuildRequires: gettext
+newsbeuter§BuildRequires:  gettext
+sugar-view-slides§BuildRequires:  gettext
+galculator§BuildRequires:  gettext
+reuse§BuildRequires:  gettext
+xfce4-power-manager§BuildRequires:  gettext
+libgweather§BuildRequires:  gettext
+atomix§BuildRequires:  gettext
+NetworkManager-pptp§BuildRequires: libtool intltool gettext
+quilt§BuildRequires:  gettext
+plee-the-bear§BuildRequires:  gettext
+fcitx5-chinese-addons§BuildRequires:  gettext-devel
+cook§BuildRequires:  gettext
+php-horde-Horde-SyncMl§BuildRequires:  gettext
+php-horde-Horde-Auth§BuildRequires:  gettext
+gscan2pdf§BuildRequires:  gettext
+quadrapassel§BuildRequires:  gettext
+fcitx-table-other§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libtool, fcitx
+viking§BuildRequires:  gettext
+mingw-exiv2§BuildRequires: gettext
+mingw-gdk-pixbuf§BuildRequires:  gettext
+phd2§BuildRequires:  gettext
+girara§BuildRequires:     gettext
+grantlee-editor§BuildRequires: gettext
+php-horde-Horde-Argv§BuildRequires:  gettext
+kbilliards§BuildRequires:  kdelibs3-devel bzip2-devel desktop-file-utils gettext
+gpodder§BuildRequires:  gettext
+pitivi§BuildRequires:  gettext
+kf5-libksane§BuildRequires: gettext
+smb4k§BuildRequires:  gettext
+vim§BuildRequires: python3-devel ncurses-devel gettext perl-devel
+kxstitch§BuildRequires:  gettext-devel
+kgrab§BuildRequires:  gettext
+abrt§BuildRequires: gettext
+rapid-photo-downloader§BuildRequires:  gettext
+yakuake§BuildRequires:  gettext
+php-horde-Horde-Perms§BuildRequires:  gettext
+wxapt§BuildRequires:  autoconf automake libtool gettext
+texi2html§BuildRequires: latex2html texlive-tex4ht gettext
+xfce4-wavelan-plugin§BuildRequires:  gettext
+guake§BuildRequires:  gettext
+gnome-shell-extensions§BuildRequires:  gettext >= 0.19.6
+resapplet§BuildRequires:	intltool, automake, gettext, desktop-file-utils
+libecpg§BuildRequires: gettext
+jpilot§BuildRequires: gettext, pilot-link-devel, perl-XML-Parser, libgcrypt-devel
+mingw-gnutls§BuildRequires:  gettext-devel
+kate§BuildRequires: gettext
+lcm§BuildRequires:  gettext
+fcitx5-chewing§BuildRequires:  gettext
+cpp-hocon§BuildRequires:  gettext
+kdbg§BuildRequires: gettext
+choqok§BuildRequires: gettext
+glib-networking§BuildRequires:  gettext
+xfce4-settings§BuildRequires:  gettext
+nautilus-search-tool§BuildRequires:	libtool gettext intltool
+gnucobol§BuildRequires:  gettext
+klog§BuildRequires:  gettext dos2unix
+xfce4-notes-plugin§BuildRequires:  gettext, intltool, desktop-file-utils
+deja-dup§BuildRequires:  gettext desktop-file-utils intltool
+harvey§BuildRequires:  gettext
+libkdegames§BuildRequires: gettext
+xfsprogs§BuildRequires:	libtool, gettext, libattr-devel, libuuid-devel
+gedit-code-assistance§BuildRequires:  gettext
+gtksourceview4§BuildRequires:  gettext
+lftp§BuildRequires:	ncurses-devel, gnutls-devel, perl-generators, pkgconfig, readline-devel, gettext
+indent§BuildRequires:  gettext-devel
+elfutils§BuildRequires: gettext
+colorhug-client§BuildRequires: gettext
+libinfinity§BuildRequires:  gettext
+sugar-clock§BuildRequires:  gettext
+fcitx5-skk§BuildRequires:  gettext
+gnome-software§BuildRequires: gettext
+udiskie§BuildRequires:  asciidoc gettext
+libnma§BuildRequires:  gettext-devel
+kstars§BuildRequires: gettext
+tomoe§BuildRequires:  glib2-devel, gettext, gtk-doc, libtool, intltool
+switchboard-plug-onlineaccounts§BuildRequires:  gettext
+fcitx5-lua§BuildRequires:  gettext
+pidgin-sipe§BuildRequires:  gettext
+xfce4-weather-plugin§BuildRequires:  gettext
+dpkg§BuildRequires:  zlib-devel bzip2-devel libselinux-devel gettext ncurses-devel|BuildRequires:  autoconf automake gettext-devel libtool
+elementary-sideload§BuildRequires:  gettext
+mingw-wxWidgets3§BuildRequires: gettext
+kaudiocreator§BuildRequires:  gettext
+audex§BuildRequires:  gettext
+sugar-read§BuildRequires: gettext
+kmymoney§BuildRequires: gettext
+libax25§BuildRequires:  gettext-devel
+sugar-ruler§BuildRequires:  python2-devel sugar-toolkit-gtk3 gettext
+openh264§BuildRequires:  gettext-devel
+ksensors§BuildRequires:  kdelibs3-devel lm_sensors-devel gettext desktop-file-utils
+radeontop§BuildRequires:	asciidoc gettext
+icoutils§BuildRequires:  gettext
+leatherman§BuildRequires:  gettext
+php-horde-nag§BuildRequires:  gettext
+ucarp§BuildRequires: gettext
+geomorph§#BuildRequires:  gettext-devel
+kBuild§BuildRequires:  gettext-devel
+teg§BuildRequires:  gettext
+blackbox§BuildRequires:  gettext-devel
+gnome-desktop3§BuildRequires: gettext
+gd§BuildRequires: gettext-devel
+brasero§BuildRequires:  gettext intltool gtk-doc
+recode§BuildRequires:  gettext-devel
+php-horde-horde§BuildRequires:  gettext
+php-horde-Horde-Prefs§BuildRequires:  gettext
+evolution§BuildRequires: gettext
+ibus-handwrite§BuildRequires:  gettext ibus-devel gtk3-devel
+tcsh§BuildRequires:    gettext-devel
+mingw-gstreamer§BuildRequires:  autoconf automake libtool gtk-doc gettext-devel
+sharutils§BuildRequires:      gettext
+genius§BuildRequires:  gettext
+osmo§BuildRequires:  gettext-devel|Requires:       gettext
+php-horde-Horde-Form§BuildRequires:  gettext
+setuptool§BuildRequires: newt-devel, gettext, perl-XML-Parser, glib2-devel, intltool, gcc
+kicad§BuildRequires:  gettext
+minetest§BuildRequires:  bzip2-devel gettext-devel sqlite-devel zlib-devel
+rng-tools§BuildRequires:  gettext
+pidgin-privacy-please§BuildRequires:  gettext
+ksquares§BuildRequires: gettext
+gnome-settings-daemon§BuildRequires:  gettext
+pychess§BuildRequires:  desktop-file-utils, gettext
+lrzsz§BuildRequires: gcc gettext
+calligra§BuildRequires: gettext-devel
+libxfce4util§BuildRequires:  gettext
+ristretto§BuildRequires:  desktop-file-utils, gettext, intltool
+kcm-fcitx§BuildRequires:	fcitx-devel gettext libxkbfile-devel
+sysstat§BuildRequires: gcc, gettext, lm_sensors-devel, systemd, git
+php-horde-mnemo§BuildRequires:  gettext
+ccgo§BuildRequires:  gettext|BuildRequires:  gettext-devel
+kernel%{?variant}§BuildRequires: gettext ncurses-devel
+sugar-distance§BuildRequires:  gettext
+orage§BuildRequires:  gettext intltool
+ggz-base-libs§BuildRequires: gettext
+v4l-utils§BuildRequires:  gettext
+sound-theme-freedesktop§BuildRequires: gettext
+pinfo§BuildRequires: automake gettext-devel libtool texinfo
+sugar§BuildRequires: gettext
+kfourinline§BuildRequires: gettext
+mingw-mediawriter§BuildRequires:  gettext
+virt-viewer§BuildRequires: gettext-devel
+calcurse§BuildRequires:  gettext-devel ncurses-devel autoconf automake asciidoc
+sugar-fractionbounce§BuildRequires:  gettext
+Macaulay2§BuildRequires: gettext-devel
+xfce4-equake-plugin§BuildRequires:  gettext
+dvdisaster§BuildRequires: gettext, desktop-file-utils
+pidgin-indicator§BuildRequires: gettext
+boinc-client§BuildRequires: gettext
+xorg-x11-utils§BuildRequires:  gettext-devel
+kde-print-manager§BuildRequires: gettext
+lazygal§BuildRequires:  gettext
+dolphin-emu§BuildRequires:  gettext
+guayadeque§BuildRequires:  gettext-devel
+fcitx5-configtool§BuildRequires:  gettext-devel
+gnome-getting-started-docs§BuildRequires:  gettext
+ktimer§BuildRequires: gettext
+libdasm§BuildRequires:  gettext-devel
+pidgin§BuildRequires:  gettext
+backup-manager§BuildRequires:  gettext|Requires:       gettext
+nettle§BuildRequires:	libtool, automake, autoconf, gettext-devel
+gmime30§BuildRequires:  gettext
+sugar-countries§BuildRequires:  python2-devel sugar-toolkit gettext
+x-tile§BuildRequires:  gettext
+freeipa§BuildRequires:  gettext|BuildRequires:  gettext-devel
+korganizer§BuildRequires: gettext
+jumpnbump§BuildRequires:  gettext
+goocanvas§BuildRequires:  pkgconfig, gettext, gtk2-devel
+gnome-chess§BuildRequires:  gettext
+gnome-shell-extension-historymanager-prefix-search§BuildRequires: gettext
+switchboard-plug-mouse-touchpad§BuildRequires:  gettext
+terminology§BuildRequires:  gettext-devel autoconf automake libtool
+fcitx-chewing§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libchewing-devel
+txt2regex§BuildRequires:  gettext
+NetworkManager-sstp§BuildRequires: libtool intltool gettext
+synapse§BuildRequires: gettext
+fcitx-unikey§BuildRequires:	cmake, fcitx-devel, gettext, intltool
+sugar-toolkit-gtk3§BuildRequires: gettext-devel|Requires: gettext
+gthumb§BuildRequires: gettext
+contractor§BuildRequires:  gettext
+compiz-plugins-main§BuildRequires: gettext-devel
+python-django-robots§BuildRequires:  gettext
+sushi§BuildRequires:  gettext
+glib2§BuildRequires: gettext
+clipit§BuildRequires:  gettext
+wingpanel-indicator-keyboard§BuildRequires:  gettext
+gsequencer§BuildRequires:      gettext-devel
+zeitgeist§BuildRequires:  gettext
+brltty§BuildRequires: gettext, at-spi2-core-devel, alsa-lib-devel
+gambas3§BuildRequires:	desktop-file-utils, gettext-devel, curl-devel, librsvg2-devel|Requires:	tar, gzip, rpm-build, gettext
+calamares§BuildRequires:  gettext
+sawfish§BuildRequires:  gettext
+fontaine§BuildRequires:    cmake gettext doxygen
+mingw-gstreamer1-plugins-good§BuildRequires:  gettext
+switchboard-plug-bluetooth§BuildRequires:  gettext
+lxsession-edit§BuildRequires:  gettext
+mousepad§BuildRequires:  gettext
+elementary-calculator§BuildRequires:  gettext
+kde-i18n§BuildRequires: gettext
+sdcv§BuildRequires:  zlib-devel  glib2-devel gettext-devel
+pidgin-guifications§BuildRequires:  libtool, gtk2-devel, gettext
+kf5-ki18n§BuildRequires:  gettext|Requires:       gettext
+krfb§BuildRequires: gettext
+akonadi-import-wizard§BuildRequires: gettext
+deepin-gettext-tools§Requires:       gettext
+colord-gtk§BuildRequires: gettext >= 0.19.8
+pakchois§BuildRequires: gettext
+xfce4-appfinder§BuildRequires:  gettext
+agenda§BuildRequires:  gettext
+lshw§BuildRequires: gettext
+gnome-user-share§BuildRequires: gettext
+neovim§BuildRequires:  gettext
+easystroke§BuildRequires:  gettext
+dasher§BuildRequires: gettext
+php-phpmyadmin-sql-parser5§BuildRequires:  gettext
+klamav§BuildRequires: gettext
+kshutdown§BuildRequires:  gettext
+glom§BuildRequires:  desktop-file-utils gettext-devel intltool
+pragha§BuildRequires:  gettext
+gjs§BuildRequires: gettext
+libvirt§BuildRequires: gettext-devel|BuildRequires: gettext|Requires: gettext
+python-sphinxcontrib-devhelp§BuildRequires:  gettext
+NetworkManager-ssh§BuildRequires: libtool intltool gettext|BuildRequires: libtool intltool gettext
+plasma-breeze§BuildRequires:  gettext
+cdcollect§BuildRequires:	glib2-devel, sqlite-devel >= 3.3.5, mono-data-sqlite, gettext
+mpop§BuildRequires:  gettext
+zanshin§BuildRequires:  gettext
+knotes§BuildRequires: gettext
+rkward§BuildRequires:  R-devel >= 4.0.2 desktop-file-utils gettext
+kjumpingcube§BuildRequires: gettext
+caribou§BuildRequires:  gettext
+flaw§BuildRequires:	SDL_gfx-devel desktop-file-utils gnu-free-sans-fonts gettext intltool
+gnome-documents§BuildRequires:  gettext >= %{gettext_version}|Requires:       gettext%{?isa} >= %{gettext_version}
+php-horde-Horde-Mail§BuildRequires:  gettext
+ypbind§BuildRequires: gettext-devel
+libXpresent§BuildRequires: gettext
+banshee§BuildRequires: gnome-doc-utils gettext-devel intltool perl(XML::Parser)
+systemd§BuildRequires:  gettext
+lxpanel§BuildRequires:  gettext
+xdialog§BuildRequires: gettext
+gnubik§BuildRequires:  gettext desktop-file-utils texinfo
+netcf§BuildRequires: gettext-devel
+purple-discord§BuildRequires: gettext-devel
+php-horde-Horde-Service-Weather§BuildRequires:  gettext
+thunar-media-tags-plugin§BuildRequires:  gettext
+lokalize§BuildRequires: gettext|Requires: gettext
+pidgin-otr§BuildRequires: pidgin-devel >= 2.0.0, perl(XML::Parser), gettext
+ibus-pinyin§BuildRequires:  gettext-devel
+cadaver§BuildRequires: neon-devel >= 0.27.0, readline-devel, ncurses-devel, gettext
+NetworkManager-iodine§BuildRequires: libtool intltool gettext
+e2fsprogs§BuildRequires: gettext
+libbonobo§BuildRequires: gettext
+kchmviewer§BuildRequires:  gettext
+WindowMaker§BuildRequires:  gettext-devel
+osinfo-db-tools§BuildRequires: gettext-devel
+gcr§BuildRequires:  gettext
+elementary-music§BuildRequires:  gettext
+wingpanel-indicator-notifications§BuildRequires:  gettext
+xfbib§BuildRequires:  gettext
+sugar-speak§BuildRequires:  gettext
+warzone2100§BuildRequires: fribidi-devel freetype-devel fontconfig-devel popt-devel gettext libtheora-devel
+anjuta§BuildRequires:  gettext
+whois§BuildRequires:  gettext
+NetworkManager-libreswan§BuildRequires: intltool gettext
+gpicview§BuildRequires:  gettext
+policycoreutils§BuildRequires: pam-devel libsepol-static >= 3.1 libsemanage-static >= 3.1 libselinux-devel >= 3.1  libcap-devel audit-libs-devel >=  3.0 gettext
+kf5-kdelibs4support§BuildRequires:  gettext-devel
+kexec-tools§BuildRequires: pkgconfig intltool gettext
+cross-gcc§BuildRequires: zlib-devel, gettext, dejagnu, bison, flex, texinfo, sharutils
+python-sphinxcontrib-qthelp§BuildRequires:  gettext
+gcab§BuildRequires:  gettext
+gammu§BuildRequires:  gettext-devel
+chromium-bsu§BuildRequires:  libappstream-glib gettext
+php-horde-Horde-Text-Filter§BuildRequires:  gettext
+garcon§BuildRequires:  gettext
+kita§BuildRequires:       gettext
+sound-juicer§BuildRequires:  gettext
+terminator§BuildRequires:  gettext
+doxygen§BuildRequires: gettext
+kmail-account-wizard§BuildRequires: gettext
+visualboyadvance-m§BuildRequires:  gettext
+sugar-maze§BuildRequires:  gettext
+ledger§BuildRequires:    gettext-devel
+subtitleeditor§BuildRequires:  gettext
+gnome-mines§BuildRequires:  gettext-devel
+aria2§BuildRequires:  gettext
+bear-factory§BuildRequires:  gettext
+kanagram§BuildRequires: gettext
+connections§BuildRequires:  gettext
+wput§BuildRequires: gettext
+alleyoop§BuildRequires: libgnomeui-devel, gettext, intltool
+wingpanel-applications-menu§BuildRequires:  gettext
+krdc§BuildRequires: gettext
+audacious§BuildRequires: gettext
+kdesdk-thumbnailers§BuildRequires:  gettext-devel
+squirrelmail§BuildRequires: gettext
+sugar-memorize§BuildRequires: gettext
+python-meh§BuildRequires: gettext
+gnome-session§BuildRequires: gettext
+procps-ng§BuildRequires: gettext-devel
+switchboard-plug-keyboard§BuildRequires:  gettext
+amarok§BuildRequires: gettext
+gedit-plugins§BuildRequires:  gettext
+elementary-photos§BuildRequires:  gettext
+notejot§BuildRequires:  gettext
+ksshaskpass§BuildRequires:  gettext
+switchboard-plug-notifications§BuildRequires:  gettext
+gnome-menus§BuildRequires: gettext
+chkconfig§BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc
+uim§BuildRequires:	anthy-devel eb-devel gettext desktop-file-utils
+morse2txt§BuildRequires:  gettext
+libcdio-paranoia§BuildRequires: gettext-devel
+sugar-playgo§BuildRequires:  gettext
+claws-mail§BuildRequires:  gettext gettext-devel
+cjs§BuildRequires: gettext
+libosinfo§BuildRequires: gettext-devel
+parted§BuildRequires: gettext-devel
+xpsk31§BuildRequires: gettext-devel
+gitg§BuildRequires:  gettext
+w3m§BuildRequires:  gettext-devel
+snapd§BuildRequires:  gettext
+wxGTK§BuildRequires:  gettext
+komparator§BuildRequires:  gettext
+kphotoalbum§BuildRequires: gettext
+fontconfig§BuildRequires:	autoconf automake libtool gettext
+gedit§BuildRequires: gettext
+virt-manager§BuildRequires: gettext
+wxGTK3§BuildRequires:  gettext
+nmap§BuildRequires: gettext-devel
+phodav§BuildRequires:  gettext-devel
+blogilo§BuildRequires: gettext
+ktp-approver§BuildRequires:  gettext
+sagator§BuildRequires: %{python_version}-devel, ed, gettext
+kpilot§BuildRequires: gettext
+NetworkManager-l2tp§BuildRequires: libtool intltool gettext
+skrooge§BuildRequires: gettext
+gvfs§BuildRequires: gettext-devel >= 0.19.4
+xcowsay§BuildRequires:  gettext
+wdiff§BuildRequires:  gettext-devel
+seahorse§BuildRequires:  gettext
+wcd§BuildRequires: gettext
+bubblemail§BuildRequires:  gettext
+lib765§BuildRequires: gettext
+at-spi2-atk§BuildRequires:  gettext
+libgxim§BuildRequires:	intltool gettext ruby rubygems
+lxrandr§BuildRequires:  gettext
+ikiwiki§BuildRequires:  gettext
+vdr-iptv§BuildRequires:  gettext
+lxtask§BuildRequires:  gettext
+gshutdown§BuildRequires:	libnotify-devel, glib2-devel, gettext
+flatpak-builder§BuildRequires:  gettext
+libburn§BuildRequires:   gcc, intltool, gettext
+digikam§BuildRequires: gettext
+ibus-rawcode§BuildRequires:  gettext-devel
+network-manager-applet§BuildRequires: gettext-devel
+fcitx-configtool§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libxml2-devel
+7kaa§BuildRequires: gettext-devel
+gmime§BuildRequires:  gettext-devel, gtk-doc
+sugar-starchart§BuildRequires:	sugar-toolkit gettext python2-devel
+php-horde-kronolith§BuildRequires:  gettext
+mozc§BuildRequires:	python gettext
+plank§BuildRequires:  gettext
+blobwars§BuildRequires:  gettext
+kf5-purpose§BuildRequires: gettext
+starcal§BuildRequires:  python3-devel desktop-file-utils gettext git
+xfce4-netload-plugin§BuildRequires:  gettext, intltool
+koffice-kivio§BuildRequires:  gettext-devel|BuildRequires:  cmake kdelibs4-devel gettext kde-filesystem
+dillo§BuildRequires:  gettext
+heimdal§BuildRequires:  gettext
+fontforge§BuildRequires:  gettext
+blender§BuildRequires:  gettext
+fetchmail§BuildRequires: gcc gettext-devel krb5-devel openssl-devel systemd python3-devel
+xfce4-battery-plugin§BuildRequires:  gettext
+kmplayer§BuildRequires: gettext
+gnome-packagekit§BuildRequires: gettext
+pastebinit§BuildRequires:  docbook-style-xsl libxslt gettext
+libsmbios§BuildRequires: gettext|BuildRequires: gettext-devel
+gnome-music§BuildRequires: gettext
+kturtle§BuildRequires: gettext
+qdigidoc§BuildRequires:  gettext
+compiz-plugins-extra§BuildRequires: gettext-devel
+gnome-translate§BuildRequires: scrollkeeper gettext
+gnome-commander§BuildRequires: gettext
+libXpm§BuildRequires: gettext
+geany-plugins§BuildRequires:  gettext intltool pkgconfig
+kwooty§BuildRequires: gettext
+mtn-browse§BuildRequires:  gettext
+lxappearance§BuildRequires:  gettext
+libclaw§BuildRequires:  gettext-devel
+vodovod§BuildRequires:	SDL_ttf-devel gettext ImageMagick
+abattis-cantarell-fonts§BuildRequires: gettext
+volume_key§BuildRequires: cryptsetup-luks-devel, gettext-devel, glib2-devel, /usr/bin/gpg2
+xfce4-eyes-plugin§BuildRequires:  gettext
+hddtemp§BuildRequires:  gettext
+libcompizconfig§BuildRequires:  gettext
+keepassx§BuildRequires:  gettext
+neverball§BuildRequires:  gettext, libvorbis-devel
+python-sphinxcontrib-serializinghtml§BuildRequires:  gettext
+photocollage§BuildRequires:  gettext|Requires:       gettext >= 0.18
+dnf-plugins-extras§BuildRequires:  gettext
+system-config-language§BuildRequires: gettext
+NetworkManager§BuildRequires: gettext-devel
+davfs2§BuildRequires:  neon-devel gettext
+ballerburg§BuildRequires:  gettext
+kanatest§BuildRequires:  gettext
+sugar-kuku§BuildRequires:  python2-devel sugar-toolkit gettext
+xfce4-clipman-plugin§BuildRequires:  gettext
+%{name}§BuildRequires:   gettext
+plasma-discover§BuildRequires: gettext
+gtk3§BuildRequires: gettext
+sugar-typing-turtle§BuildRequires:  gettext
+gnome-shell§BuildRequires:  gettext >= 0.19.6
+php-horde-Horde-Exception§BuildRequires:  gettext
+libXp§BuildRequires: libtool automake autoconf gettext
+vdr-remote§BuildRequires:  gettext
+libfm§BuildRequires:  gettext
+mkvtoolnix§BuildRequires: gettext
+xfce4-mpc-plugin§BuildRequires:  gettext
+tuna§BuildRequires: python3-devel, gettext
+foxtrotgps§BuildRequires: gettext
+im-chooser§BuildRequires:	desktop-file-utils gettext
+kcoloredit§BuildRequires:  gettext
+xfce4-places-plugin§BuildRequires:  gettext
+lxlauncher§BuildRequires:  gettext intltool
+piper§BuildRequires: gettext-devel
+grip§BuildRequires: gettext id3lib-devel
+ezstream§BuildRequires:  gettext-devel
+gucharmap§BuildRequires:  gettext
+mail-notification§BuildRequires:  gettext
+lemonpos§BuildRequires: gettext
+gnome-extensions-app§BuildRequires: gettext
+texstudio§BuildRequires:  gettext
+ghex§BuildRequires:  gettext
+cinnamon-translations§BuildRequires:  gettext
+mesa§BuildRequires:  gettext
+alsa-utils§BuildRequires: gettext-devel
+subscription-manager§BuildRequires: gettext
+system-switch-java§BuildRequires: gettext|BuildRequires: gettext-devel
+tilda§BuildRequires:  gettext-devel
+flac§BuildRequires: gcc gcc-c++ automake autoconf libtool gettext-devel doxygen
+nip2§BuildRequires:	flex bison intltool gettext
+exo§BuildRequires:  gettext
+gnome-devel-docs§BuildRequires: gettext
+passwdqc§BuildRequires: gettext
+elementary-calendar§BuildRequires:  gettext
+gnubg§BuildRequires: gettext-devel
+ghdl§BuildRequires: zlib-devel, gettext, bison, flex
+libfilezilla§BuildRequires: gettext
+frozen-bubble§BuildRequires: gettext
+kcharselect§BuildRequires: gettext
+python-sphinxcontrib-htmlhelp§BuildRequires:  gettext
+dippi§BuildRequires:  gettext
+amtk§BuildRequires:  gettext
+libisds§BuildRequires:  gettext-devel
+strongswan§BuildRequires:  gettext-devel
+authd§BuildRequires: openssl-devel gettext help2man systemd-units
+gnome-panel§BuildRequires:  gettext-devel
+swell-foop§BuildRequires:  gettext-devel
+frogr§BuildRequires:  gettext
+appstream§BuildRequires: gettext
+kcm_systemd§BuildRequires:  gettext
+php-horde-Horde-Core§BuildRequires:  gettext
+balsa§BuildRequires: gettext
+mingw-gstreamer1-plugins-base§BuildRequires:  gettext
+vino§BuildRequires: gettext
+wol§BuildRequires:  gettext
+rhythmbox§BuildRequires: gettext
+sugar-flipsticks§BuildRequires:  gettext
+gnome-font-viewer§BuildRequires:  gettext
+lxpolkit§BuildRequires:  gettext
+mingw-gtksourceview3§BuildRequires:  gettext
+kpat§BuildRequires: gettext
+xournalpp§BuildRequires:  gettext
+sugar-portfolio§BuildRequires:  python3-devel sugar-toolkit-gtk3 gettext
+fuse§BuildRequires:	autoconf, automake, libtool, gettext-devel, make
+akonadiconsole§BuildRequires: gettext
+gwenview§BuildRequires: gettext
+kscope§BuildRequires:	desktop-file-utils, qt5-qtbase-devel, gettext, qscintilla-qt5-devel
+gammastep§BuildRequires:  gettext
+guile22§BuildRequires: gettext-devel libunistring-devel libffi-devel gc-devel
+valyriatear§BuildRequires: gettext
+eiskaltdcpp§BuildRequires:  gettext-devel
+elementary-camera§BuildRequires:  gettext
+fpm2§BuildRequires: gtk3-devel, libxml2-devel, nettle-devel, desktop-file-utils, gettext, intltool, gcc
+kdebase3§BuildRequires: gettext
+ktp-kded-integration-module§BuildRequires:  gettext
+kmplot§BuildRequires: gettext
+input-pad§BuildRequires:  gettext-devel
+pal§BuildRequires: gettext
+lxmusic§BuildRequires:  gettext
+snapper§BuildRequires:  gettext
+gnome-shell-extension-openweather§BuildRequires:  gettext-devel
+cups-pk-helper§BuildRequires:  gettext-devel >= 0.17
+gnome-photos§BuildRequires: gettext >= 0.19.8
+fcitx-fbterm§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libxml2-devel
+gnome-flashback§BuildRequires:  gettext-devel
+clementine§BuildRequires:  gettext
+darktable§BuildRequires: gettext
+gramps§BuildRequires:  gettext
+polari§BuildRequires: gettext >= 0.19.6
+abook§BuildRequires: gettext-devel
+gplugin§BuildRequires:  gettext
+PackageKit§BuildRequires: gettext
+kf5-libkipi§BuildRequires: gettext
+deepin-terminal§BuildRequires:  gettext
+sugar-stopwatch§BuildRequires: gettext
+git§BuildRequires:  gettext
+thunar-archive-plugin§BuildRequires:  gettext
+supertux§BuildRequires:  gettext
+accountsservice§BuildRequires:  gettext-devel
+dia§BuildRequires:  gettext
+attr§BuildRequires: gettext
+xboard§BuildRequires: gettext
+libbytesize§BuildRequires: gettext-devel
+libunicapgtk§BuildRequires:	autoconf, automake, gettext-devel, libtool|BuildRequires:	intltool, /usr/bin/perl, perl(XML::Parser), gettext, gtk-doc >= 1.4
+git-cola§BuildRequires:  gettext
+aspell§BuildRequires: chrpath, gettext, ncurses-devel, pkgconfig, perl-interpreter
+iagno§BuildRequires:  gettext
+php-horde-wicked§BuildRequires:  gettext
+ibus-anthy§BuildRequires:  gettext-devel
+php-horde-Horde-Share§BuildRequires:  gettext
+wine-mono§BuildRequires:  gettext
+gnome-shell-extension-gamemode§BuildRequires:  gettext >= 0.19.6
+sylpheed§BuildRequires:  desktop-file-utils pkgconfig gettext xdg-utils
+sumwars§BuildRequires:  gettext, cmake, ogre-devel, cegui-devel, ois-devel, lua-devel,
+apper§BuildRequires: gettext
+mingw-goocanvas2§BuildRequires:  gettext
+koverartist§BuildRequires:  kdelibs4-devel gettext desktop-file-utils cmake
+lightdm-gtk§BuildRequires:  gettext
+yasm§BuildRequires: gettext-devel
+libhangul§BuildRequires:	  gettext-devel, automake, libtool
+php-horde-Horde-Itip§BuildRequires:  gettext
+kid3§BuildRequires:  gettext
+dbus-glib§BuildRequires: gettext
+cpio§BuildRequires: texinfo, autoconf, automake, gettext, gettext-devel, rmt
+krb5§BuildRequires: autoconf, bison, cmake, flex, gawk, gettext, pkgconfig, sed
+weechat§BuildRequires: gettext
+blinken§BuildRequires: gettext
+gxmessage§BuildRequires:  gettext
+kile§BuildRequires: gettext
+man-db§BuildRequires: gdbm-devel, gettext, groff, less, libpipeline-devel, zlib-devel
+xfce4-taskmanager§BuildRequires:  gettext
+gegl04§BuildRequires:  gettext-devel >= 0.19.8
+nimbus§BuildRequires:  icon-naming-utils glib2-devel gtk2-devel gettext intltool
+tali§BuildRequires:  gettext
+gnucash§BuildRequires: desktop-file-utils, gettext >= 0.9.6
+elementary-screenshot-tool§BuildRequires:  gettext
+xfburn§BuildRequires:  gettext
+libgnomeui§BuildRequires: gettext
+powertop§BuildRequires:    gettext-devel, ncurses-devel, pciutils-devel, zlib-devel, libnl3-devel
+ccrypt§BuildRequires:  gettext
+breezy§BuildRequires:  gettext
+sugar-recall§BuildRequires:  python3 python3-devel sugar-toolkit-gtk3 gettext
+gaupol§BuildRequires:	desktop-file-utils, gettext, doxygen, intltool
+sugar-words§BuildRequires:  python3 python3-devel sugar-toolkit-gtk3 gettext
+shigofumi§BuildRequires:  gettext-devel
+ibus-input-pad§BuildRequires:  gettext-devel
+libreoffice§BuildRequires: gettext
+sane-backends§BuildRequires: gettext
+gnome-dictionary§BuildRequires:  gettext
+mate-common§Requires:       gettext
+ufw-kde§BuildRequires:  gettext
+synfig§BuildRequires:  autoconf automake gettext-devel intltool
+rmlint§BuildRequires:  gettext
+gnupg2§BuildRequires: gettext
+clamav§BuildRequires:  autoconf automake gettext-devel libtool libtool-ltdl-devel
+xpad§BuildRequires:  gettext
+%{target}-binutils§BuildRequires:  gettext-devel autoconf automake
+gssproxy§BuildRequires: gettext-devel
+lxsession§BuildRequires:  gettext
+ktikz§BuildRequires:  gettext
+folks§BuildRequires:  gettext
+ibus§BuildRequires:  gettext-devel|Requires:       gettext
+libidn2§BuildRequires:    gettext
+webkit2gtk3§BuildRequires:  gettext
+purple-plugin_pack§BuildRequires:  pidgin-devel xmms-devel perl(XML::Parser) gettext-devel
+mingw-%{pkgname}§BuildRequires:  gettext
+zenity§BuildRequires: gettext
+kdesvn§BuildRequires:  gettext
+kwebkitpart§BuildRequires: gettext
+xblast§BuildRequires:  libXt-devel gettext gawk desktop-file-utils SDL_gfx-devel
+kpmcore§BuildRequires:  gettext
+revelation§BuildRequires:  gettext-devel
+gnote§BuildRequires:  gettext
+gnome-tweaks§BuildRequires:  gettext
+regexxer§BuildRequires:	desktop-file-utils, gettext
+system-config-printer§BuildRequires: gettext-devel
+sooperlooper§BuildRequires: gettext-devel ncurses-devel wxGTK3-devel rubberband-devel
+gdm§BuildRequires: gettext-devel
+gtksourceview3§BuildRequires: gettext
+kdepim4§BuildRequires: gettext
+ibus-sayura§BuildRequires:  gettext-devel
+kde-l10n§BuildRequires: gettext
+libgtop2§BuildRequires:  gettext
+antimicroX§BuildRequires:  gettext
+python3-rpm§BuildRequires: gettext-devel
+aqbanking§BuildRequires: gmp-devel, gettext, libtool
+mingw-gstreamer1-plugins-bad-free§BuildRequires:  autoconf automake libtool gettext-devel
+zbar§BuildRequires:	autoconf automake libtool gettext-devel
+gnome-desktop§BuildRequires: gettext
+yelp§BuildRequires: gettext-devel
+kwave§BuildRequires:  gettext
+slim§BuildRequires:  pkgconfig gettext libselinux-devel pam-devel cmake
+nicotine+§BuildRequires:  gettext
+kollision§BuildRequires: gettext
+ncmpc§BuildRequires:  gettext
+emerald§BuildRequires:  gettext-devel
+gcompris-qt§BuildRequires:  gettext
+elementary-files§BuildRequires:  gettext
+baobab§BuildRequires:  gettext
+audacious-plugins§BuildRequires: gettext-devel
+dvdbackup§BuildRequires:  gettext
+trader§BuildRequires:  gcc gettext pkgconfig(ncurses) desktop-file-utils gperf
+mpdris2§BuildRequires:  gettext intltool desktop-file-utils python3-devel
+gnome-screenshot§BuildRequires:  gettext
+php-horde-Horde-Dav§BuildRequires:  gettext
+xkeyboard-config§BuildRequires:  gettext gettext-devel
+grub2§BuildRequires:	freetype-devel gettext-devel git
+sensible-utils§Requires:       gettext
+jwm§BuildRequires:  gettext
+vte§BuildRequires: gettext
+gimp-focusblur-plugin§BuildRequires:  gettext-devel
+pim-sieve-editor§BuildRequires: gettext
+rekollect§BuildRequires: gettext
+sugar-colordeducto§BuildRequires:	sugar-toolkit-gtk3 gettext python3-devel
+gfs2-utils§BuildRequires: gettext-devel
+mingw-libvirt§BuildRequires:  gettext|BuildRequires: gettext-devel
+exiv2§BuildRequires: gettext
+tre§BuildRequires: gettext-devel
+fswatch§BuildRequires: gcc-c++ gcc gettext-devel
+toppler§BuildRequires:  gettext
+akregator§BuildRequires: gettext
+sugar-labyrinth§BuildRequires:  gettext python2 sugar-toolkit
+system-config-rootpassword§BuildRequires:  gettext intltool
+gnome-vfs2§BuildRequires: gettext
+libnsl2§BuildRequires: autoconf, automake, gettext-devel, libtool, libtirpc-devel
+vte291§BuildRequires:  gettext
+cockpit§BuildRequires: gettext >= 0.19.7
+libticalcs2§BuildRequires:  glib2-devel, pkgconfig, libticonv-devel, libticables2-devel, libtifiles2-devel, tfdocgen, gettext|BuildRequires:  autoconf, automake, libtool, gettext-devel
+four-in-a-row§BuildRequires:  gettext-devel
+filezilla§BuildRequires: gettext
+gnome-robots§BuildRequires:  gettext
+klettres§BuildRequires: gettext
+glade2§BuildRequires: gettext
+plasma-applet-weather-widget§BuildRequires:	libappstream-glib, qt5-qtdeclarative-devel, gettext-devel
+iso-codes§BuildRequires: gettext
+kgeography§BuildRequires: gettext
+m17n-db§BuildRequires: gettext
+firewalld§BuildRequires: gettext
+gnome-books§Requires:       gettext%{?isa}
+lingot§BuildRequires:  gettext
+workrave§BuildRequires: gettext
+libsecret§BuildRequires:  gettext
+kwordquiz§BuildRequires: gettext
+libunicap§BuildRequires:	intltool, /usr/bin/perl, perl(XML::Parser), gettext, gtk-doc >= 1.4
+qalculate-kde§BuildRequires:  gettext
+openvas-gsa§BuildRequires:  gettext
+sugar-getiabooks§BuildRequires:  gettext
+opencc§BuildRequires:  gettext
+frescobaldi§BuildRequires:  gettext
+flatpak§BuildRequires:  gettext
+mingw-flac§BuildRequires:  automake autoconf libtool gettext-devel
+duplicity§BuildRequires:  gcc gettext
+gtk-sharp3§BuildRequires:  gettext
+libgdata§BuildRequires:  gettext
+mcrypt§BuildRequires:	libmcrypt-devel, mhash-devel, gettext, zlib-devel
+mingw-libidn§BuildRequires:  pkgconfig gettext-devel
+gsettings-desktop-schemas§BuildRequires:  gettext
+granite§BuildRequires:  gettext
+python-sphinxcontrib-applehelp§BuildRequires:  gettext
+gnome-contacts§BuildRequires:  gettext
+python-simpleline§BuildRequires: gettext
+alacarte§BuildRequires:  python3, python3-devel, gettext
+devhelp§BuildRequires: gettext
+guile§BuildRequires: gettext-devel libunistring-devel libffi-devel gc-devel
+xfwm4§BuildRequires:  gettext
+dnf-plugins-core§BuildRequires:  gettext
+gnome-shell-extension-windowoverlay-icons§BuildRequires: gettext
+xfce4-dict§BuildRequires:  gettext
+appeditor§BuildRequires:  gettext
+xorg-x11-apps§BuildRequires:  gettext-devel
+sugar-pippy§BuildRequires: gettext
+mono-tools§BuildRequires: gettext-devel
+datamash§BuildRequires:  gettext perl(Digest::MD5) perl(Digest::SHA) perl(Data::Dumper)
+freecad§BuildRequires:  cmake gcc-c++ gettext dos2unix
+kamoso§BuildRequires:  gettext
+gnome-mahjongg§BuildRequires:  gettext
+simple-scan§BuildRequires:  gettext
+evince§BuildRequires:  gettext-devel
+php-horde-passwd§BuildRequires:  gettext
+gobject-introspection§BuildRequires:  gettext
+plymouth§BuildRequires: gettext-devel
+group-service§BuildRequires: gettext
+yad§BuildRequires:  gettext
+sugar-log§BuildRequires: gettext
+wingpanel-indicator-sound§BuildRequires:  gettext
+gnome-themes-extra§BuildRequires:  gettext
+rocs§BuildRequires: gettext
+mingw-fontconfig§BuildRequires:  automake autoconf libtool gettext-devel
+mypaint§BuildRequires:  gettext
+vrms-rpm§BuildRequires: gettext-devel
+scmxx§BuildRequires: libxslt-devel, gettext
+tin§BuildRequires: gettext
+netplug§BuildRequires: gettext
+tellico§BuildRequires:  gettext
+xwxapt§BuildRequires:  automake autoconf libtool gettext
+debbuild§BuildRequires:  gettext
+q§BuildRequires:  autoconf, libtool, gettext-devel
+libbonoboui§BuildRequires: gettext
+kf5-libktorrent§BuildRequires: gettext
+grub-customizer§BuildRequires:  gettext
+clawsker§BuildRequires:  gettext
+gcolor3§BuildRequires:  gettext
+trackballs§BuildRequires:  SDL2_ttf-devel zlib-devel libglvnd-devel gettext
+kruler§BuildRequires: gettext
+Thunar§BuildRequires:  intltool gettext
+lordsawar§BuildRequires:  gtkmm30-devel gettext desktop-file-utils gstreamermm-devel
+authselect§BuildRequires:  gettext-devel
+gnome-common§Requires:       gettext
+drgeo§BuildRequires: libglade2-devel, intltool, gettext
+wxMaxima§BuildRequires: gettext
+kdiamond§BuildRequires: gettext
+sugar-castle§BuildRequires:	python2-devel sugar-toolkit gettext
+NetworkManager-openvpn§BuildRequires: libtool intltool gettext
+gnome-system-monitor§BuildRequires:  gettext
+mingw-spice-gtk§BuildRequires: gettext
+plasma-nm§BuildRequires:  gettext
+xfce4-dev-tools§BuildRequires:  gettext-devel
+switchboard-plug-display§BuildRequires:  gettext
+massif-visualizer§BuildRequires:  gettext
+tagtool§BuildRequires:  gettext
+pulsecaster§BuildRequires:  desktop-file-utils, gettext
+pgdbf§BuildRequires:  libtool autoconf automake gettext-devel
+lcd4linux§BuildRequires:  libvncserver-devel gettext-devel dbus-devel
+electron-cash§BuildRequires:  gettext
+edgar§BuildRequires: gettext
+NetworkManager-fortisslvpn§BuildRequires: libtool gettext
+byzanz§BuildRequires: gettext-devel
+libcdio§BuildRequires: gettext-devel
+ddccontrol§BuildRequires:    perl(XML::Parser), gettext, libtool, libxml2-devel, tidy|BuildRequires:    docbook-style-xsl, gettext-devel, intltool
+libucil§BuildRequires:	autoconf, automake, gettext-devel, libtool|BuildRequires:	intltool, /usr/bin/perl, perl(XML::Parser), gettext, gtk-doc >= 1.4
+soundconverter§BuildRequires:  gettext
+kiconedit§BuildRequires: gettext
+xfce4-datetime-plugin§BuildRequires:  gettext
+mingw-gstreamer1§BuildRequires:  gettext
+fcitx-libpinyin§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libpinyin-devel
+quick-usb-formatter§BuildRequires: cmake kdelibs4-devel gettext
+oscap-anaconda-addon§BuildRequires:  gettext
+bijiben§BuildRequires:  gettext
+passwd§BuildRequires: gettext, popt-devel
+totem§BuildRequires: gettext
+ibus-libpinyin§BuildRequires:  gettext-devel
+geeqie§BuildRequires: gettext intltool desktop-file-utils
+mousetweaks§BuildRequires:  gettext
+thunar-volman§BuildRequires:  gettext
+libgsf§BuildRequires: gettext
+minicom§BuildRequires: lockdev-devel ncurses-devel autoconf automake gettext-devel
+sysprof§BuildRequires:  gettext
+gtk2§BuildRequires: gettext
+ktorrent§BuildRequires: gettext
+sugar-pukllanapac§BuildRequires:  python3 python3-devel sugar-toolkit-gtk3 gettext
+pioneers§BuildRequires:  libgnome-devel gtk2-devel gettext scrollkeeper intltool
+sssd§BuildRequires: gettext-devel
+timeshift§BuildRequires:  gettext
+php-horde-Horde-Mime§BuildRequires:  gettext
+fldigi§BuildRequires:  gettext
+glade§BuildRequires:  gettext
+libpeas§BuildRequires:  gettext
+tomboy§BuildRequires:  gettext
+gnome-latex§BuildRequires:  gettext
+zathura§BuildRequires:     gettext
+abrt-java-connector§BuildRequires: gettext
+php-horde-Horde-Data§BuildRequires:  gettext
+guitarix§BuildRequires:  gettext-devel
+kakasi§BuildRequires:	autoconf automake libtool gettext-devel
+dayplanner§BuildRequires:  gettext desktop-file-utils perl-interpreter
+wingpanel§BuildRequires:  gettext
+sugar-finance§BuildRequires: gettext
+tepl§BuildRequires:  gettext
+openscad§BuildRequires:  gettext
+vfrnav§BuildRequires:  gettext|# BuildRequires: gettext
+acl§BuildRequires: gettext
+ibus-libzhuyin§BuildRequires:  gettext-devel
+colord§BuildRequires: gettext
+mingw-gdbm§BuildRequires:  gettext-devel
+hunspell§BuildRequires: autoconf, automake, libtool, ncurses-devel, gettext
+xsane§BuildRequires: gettext-devel
+sugar-turtleart§BuildRequires: gettext
+sugar-browse§BuildRequires: gettext
+fcitx-ui-light§BuildRequires:	cmake, fcitx-devel, gettext, intltool, libcurl-devel, pkgconfig
+enigma§BuildRequires:  gettext
+sugar-terminal§BuildRequires: gettext
+debootstrap§Requires:       gettext
+ibus-m17n§BuildRequires:  gettext-devel >= 0.19
+nautilus§BuildRequires:  gettext
+wingpanel-indicator-session§BuildRequires:  gettext
+perl-Padre§BuildRequires:  gettext
+klines§BuildRequires: gettext
+tmispell-voikko§BuildRequires:  libvoikko-devel ncurses-devel gettext glibmm24-devel
+bio2jack§BuildRequires:  gettext
+flex§BuildRequires: gettext gettext-devel bison m4 help2man gcc gcc-c++ automake libtool
+evolution-data-server§BuildRequires: gettext
+wallpapoz§BuildRequires:  gettext
+tracker3§BuildRequires:  gettext
+parole§BuildRequires:  gettext
+lbrickbuster2§BuildRequires:  gettext
+kf5-libkgeomap§BuildRequires: gettext
+gconf-editor§BuildRequires: gettext
+postgresql§BuildRequires: gettext >= 0.10.35
+sugar-record§BuildRequires:  gettext
+poppler§BuildRequires: gettext-devel
+mingw-postgresql§BuildRequires:  bison flex gettext pkgconfig tcl
+ibus-hangul§BuildRequires:  gettext-devel, automake, libtool
+gnome-rdp§BuildRequires:  gettext
+tvtime§BuildRequires: libtool gettext-devel
+cross-binutils§BuildRequires: texinfo >= 4.0, gettext, flex, bison, zlib-devel
+bomber§BuildRequires: gettext
+gnome-user-docs§BuildRequires:  gettext
+bovo§BuildRequires: gettext
+ktp-contact-list§BuildRequires:  gettext
+mingw-gtk3§BuildRequires:  gettext
+initial-setup§BuildRequires: gettext
+virt-v2v§BuildRequires: gettext-devel
+volumeicon§BuildRequires:  gettext
+kmetronome§BuildRequires:  gettext
+iputils§BuildRequires: gettext
+thunar-vfs§BuildRequires:  intltool gettext
+usbauth-notifier§BuildRequires:  gettext-devel
+elementary-code§BuildRequires:  gettext
+kde-partitionmanager§BuildRequires:  gettext
+kdevelop-php§BuildRequires:  gettext
+fuse-encfs§BuildRequires:  gettext-devel >= 0.18
+elementary§BuildRequires: gettext
+gtk4§BuildRequires:  gettext
+pspp§BuildRequires:  gettext|BuildRequires:  gettext-devel
+%{?scl_prefix}gdb§BuildRequires: gcc-c++ ncurses-devel%{nil} texinfo gettext flex bison
+php-horde-Horde-Smtp§BuildRequires:  gettext
+python-blivet§BuildRequires: gettext|BuildRequires: gettext
+wingpanel-indicator-nightlight§BuildRequires:  gettext
+tilix§BuildRequires:  gettext-devel
+gtk-doc§BuildRequires: gettext
+php-horde-Horde-Icalendar§BuildRequires:  gettext
+lilypond§BuildRequires:  t1utils bison flex ImageMagick gettext texlive-tetex
+kmines§BuildRequires: gettext

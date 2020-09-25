@@ -1,0 +1,99 @@
+tar§BuildRequires: autoconf automake texinfo gettext libacl-devel
+openconnect§BuildRequires:	autoconf automake libtool gettext pkgconfig(liblz4)
+homebank§BuildRequires:  atk-devel cairo-devel desktop-file-utils gettext gtk3-devel
+transmission§BuildRequires:  gettext intltool
+libgda§BuildRequires:    gtk-doc intltool gettext flex bison perl(XML::Parser)
+sugar-calculator§BuildRequires:  python3 gettext python3-devel sugar-toolkit-gtk3
+linsmith§BuildRequires:  desktop-file-utils gettext libgnomeui-devel
+warmux§BuildRequires:  gettext libxml++-devel desktop-file-utils
+grsync§BuildRequires:  gtk2-devel desktop-file-utils gettext perl(XML::Parser)
+mercurial§BuildRequires: emacs-nox emacs-el pkgconfig gettext python3-docutils
+sakura§BuildRequires:  cmake desktop-file-utils gettext /usr/bin/pod2man
+kguitar§BuildRequires:	  gettext 
+typespeed§BuildRequires: ncurses-devel gettext desktop-file-utils
+zvbi§BuildRequires:      gettext >= 0.16.1
+setroubleshoot-plugins§BuildRequires: intltool gettext python3-devel
+apt§BuildRequires:  gettext >= 0.19
+denemo§BuildRequires: gettext libxml2-devel fftw-devel desktop-file-utils
+setroubleshoot§BuildRequires: intltool gettext python3 python3-devel|BuildRequires: intltool gettext python3
+dialog§BuildRequires: ncurses-devel gcc gettext findutils libtool gnupg2
+tuxpaint-stamps§BuildRequires:  gettext python3-devel
+xfce4-session§BuildRequires:  gettext 
+gimp§BuildRequires:  gettext >= 0.19
+fgrun§BuildRequires:  gettext boost-devel desktop-file-utils
+sugar-nutrition§BuildRequires:  python3 gettext python3-devel sugar-toolkit-gtk3
+NetworkManager-openconnect§BuildRequires: intltool gettext libtool
+gwenhywfar§BuildRequires: gnutls-devel gettext libgcrypt-devel openssl-devel
+libidn1.34§BuildRequires: gettext gettext-devel
+libidn§BuildRequires: gettext gettext-devel
+kernel-tools§BuildRequires: pciutils-devel gettext ncurses-devel
+blivet-gui§BuildRequires: gettext >= 0.18.3
+nemiver§  (3) Add gettext and perl(XML::Parser) BuildRequires to fix mock building.
+debconf§BuildRequires:  gettext >= 0.13
+vim§BuildRequires: python3-devel ncurses-devel gettext perl-devel
+gnome-shell-extensions§BuildRequires:  gettext >= 0.19.6
+nautilus-search-tool§BuildRequires:	libtool gettext intltool
+klog§BuildRequires:  gettext dos2unix
+deja-dup§BuildRequires:  gettext desktop-file-utils intltool
+dpkg§BuildRequires:  zlib-devel bzip2-devel libselinux-devel gettext ncurses-devel
+ksensors§BuildRequires:  kdelibs3-devel lm_sensors-devel gettext desktop-file-utils
+icoutils§BuildRequires:  gettext 
+brasero§BuildRequires:  gettext intltool gtk-doc
+ibus-handwrite§BuildRequires:  gettext ibus-devel gtk3-devel
+kcm-fcitx§BuildRequires:	fcitx-devel gettext libxkbfile-devel
+kernel%{?variant}§BuildRequires: gettext ncurses-devel
+orage§BuildRequires:  gettext intltool
+fontaine§BuildRequires:    cmake gettext doxygen
+mousepad§BuildRequires:  gettext 
+colord-gtk§BuildRequires: gettext >= 0.19.8
+xfce4-appfinder§BuildRequires:  gettext 
+rkward§BuildRequires:  R-devel >= 4.0.2 desktop-file-utils gettext 
+flaw§BuildRequires:	SDL_gfx-devel desktop-file-utils gnu-free-sans-fonts gettext intltool
+gnome-documents§BuildRequires:  gettext >= %{gettext_version}
+gnubik§BuildRequires:  gettext desktop-file-utils texinfo
+warzone2100§BuildRequires: fribidi-devel freetype-devel fontconfig-devel popt-devel gettext libtheora-devel
+chkconfig§BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc
+uim§BuildRequires:	anthy-devel eb-devel gettext desktop-file-utils
+claws-mail§BuildRequires:  gettext gettext-devel
+libgxim§BuildRequires:	intltool gettext ruby rubygems
+sugar-starchart§BuildRequires:	sugar-toolkit gettext python2-devel
+starcal§BuildRequires:  python3-devel desktop-file-utils gettext git
+koffice-kivio§BuildRequires:  cmake kdelibs4-devel gettext kde-filesystem
+geany-plugins§BuildRequires:  gettext intltool pkgconfig
+vodovod§BuildRequires:	SDL_ttf-devel gettext ImageMagick
+photocollage§Requires:       gettext >= 0.18
+gnome-shell§BuildRequires:  gettext >= 0.19.6
+lxlauncher§BuildRequires:  gettext intltool
+grip§BuildRequires: gettext id3lib-devel
+authd§BuildRequires: openssl-devel gettext help2man systemd-units
+gnome-photos§BuildRequires: gettext >= 0.19.8
+polari§BuildRequires: gettext >= 0.19.6
+gnome-shell-extension-gamemode§BuildRequires:  gettext >= 0.19.6
+sylpheed§BuildRequires:  desktop-file-utils pkgconfig gettext xdg-utils
+koverartist§BuildRequires:  kdelibs4-devel gettext desktop-file-utils cmake
+nimbus§BuildRequires:  icon-naming-utils glib2-devel gtk2-devel gettext intltool
+gnucash§BuildRequires: desktop-file-utils, gettext >= 0.9.6
+xblast§BuildRequires:  libXt-devel gettext gawk desktop-file-utils SDL_gfx-devel
+slim§BuildRequires:  pkgconfig gettext libselinux-devel pam-devel cmake
+trader§BuildRequires:  gcc gettext pkgconfig(ncurses) desktop-file-utils gperf
+mpdris2§BuildRequires:  gettext intltool desktop-file-utils python3-devel
+xkeyboard-config§BuildRequires:  gettext gettext-devel
+sugar-colordeducto§BuildRequires:	sugar-toolkit-gtk3 gettext python3-devel
+sugar-labyrinth§BuildRequires:  gettext python2 sugar-toolkit
+system-config-rootpassword§BuildRequires:  gettext intltool
+cockpit§BuildRequires: gettext >= 0.19.7
+sugar-pippy§BuildRequires: gettext 
+datamash§BuildRequires:  gettext perl(Digest::MD5) perl(Digest::SHA) perl(Data::Dumper)
+freecad§BuildRequires:  cmake gcc-c++ gettext dos2unix
+lordsawar§BuildRequires:  gtkmm30-devel gettext desktop-file-utils gstreamermm-devel
+sugar-castle§BuildRequires:	python2-devel sugar-toolkit gettext 
+geeqie§BuildRequires: gettext intltool desktop-file-utils
+pioneers§BuildRequires:  libgnome-devel gtk2-devel gettext scrollkeeper intltool
+dayplanner§BuildRequires:  gettext desktop-file-utils perl-interpreter
+tmispell-voikko§BuildRequires:  libvoikko-devel ncurses-devel gettext glibmm24-devel
+flex§BuildRequires: gettext gettext-devel bison m4 help2man gcc gcc-c++ automake libtool
+parole§BuildRequires:  gettext 
+postgresql§BuildRequires: gettext >= 0.10.35
+mingw-postgresql§BuildRequires:  bison flex gettext pkgconfig tcl
+%{?scl_prefix}gdb§BuildRequires: gcc-c++ ncurses-devel%{nil} texinfo gettext flex bison
+lilypond§BuildRequires:  t1utils bison flex ImageMagick gettext texlive-tetex

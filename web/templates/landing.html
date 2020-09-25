@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+a:hover {
+    color:lightslategrey;
+}
+a {
+    color: darkslategrey;
+}
+hr {
+  border: 1px dotted;
+}
+.content {
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.sub-content {
+    margin: 5%;
+    min-height: 150px;
+}
+</style>
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1><small>analysis around,</small> a few i18n Projects</h1><hr/>
+    <div class="sub-content">
+        <h2>Translation Sub-packaging</h2>
+        <div style="margin:1%">
+            <p> - Please see <a href="{% url 'subpkg' %}">reports</a> for some context, first.</p>
+            <p> - Currently under
+                <a href="https://github.com/rpm-software-management/rpm/issues/1276" target="_blank">discussion</a>
+                with the upstream.</p>
+        </div>
+    </div>
+    <div class="sub-content">
+        <h2>Gettext Improvements</h2>
+        <div style="margin:1%">
+            <p> - Upstream bugs, fedora bugs</p>
+            <p> - Separate out <code>gettext-tools*.rpm</code> from <code>gettext*.rpm</code>
+                (<a href="https://git.savannah.gnu.org/gitweb/?p=gettext.git;a=blob;f=PACKAGING;h=f4bae4561ec70a9de2532502b5c2358bb976036c;hb=HEAD" target="_blank">inspiration</a>)
+                (<a href="{% url 'reports-gettext' %}">dependencies</a>)</p>
+            <p> - Per-language configuration for xgettext</p>
+            <p> - Generalize ITS support for json, yaml, etc.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

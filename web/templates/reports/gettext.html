@@ -1,0 +1,90 @@
+{% extends "../base.html" %}
+
+{% block style %}
+<style>
+a:hover {
+    color:lightslategrey;
+}
+a {
+    text-decoration: none !important;
+    color: darkslategrey;
+}
+table, th, td {
+    border-top: 1px dotted lightslategrey;
+    border-bottom: 1px dotted lightslategrey;
+    border-collapse: collapse;
+    /* width: 50%; */
+    margin: 1%;
+    padding: 5px;
+    /* white-space:nowrap; */
+}
+.summary-content {
+    margin-right:1%;
+    border: 1px dotted lightgrey;
+}
+.sub-content {
+    padding: 10px;
+    max-height: 80vh;
+    overflow: scroll;
+}
+.column {
+  float: left;
+  width: 48%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.highlight {
+    color: darkgoldenrod;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+
+    {% if summary %}
+    <div class="content">
+        <h2>{{ summary }} <small class="pull-right">
+            <a href="{% url 'home' %}"><i class="fa fa-home"></i></a></small>
+        </h2>
+        <div class="container">
+            <div class="row">
+                <div class="column summary-content">
+                    <h3 style="padding-left:1%">{{ gettext_data|length }} dependent packages:</h3>
+                    <div class="sub-content"><table>
+                    {% for pkg, info in gettext_data.items|dictsort:0 %}
+                        <tr>
+                            <td width="10%">{{ forloop.counter }}</td>
+                            <td width="20%">{{ pkg }}</td>
+                            <td width="70%">{% for i in info %}{{ i }}<br/>{% endfor %}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td>No records found.</td></tr>
+                    {% endfor %}
+                    </table></div>
+                </div>
+                <div class="column summary-content">
+                <h3 style="padding-left:1%">{{ devel_data|length }} devel dependent packages:</h3>
+                    <div class="sub-content"><table>
+                    {% for pkg, info in devel_data.items|dictsort:0 %}
+                        <tr>
+                            <td width="10%">{{ forloop.counter }}</td>
+                            <td width="20%">{{ pkg }}</td>
+                            <td width="70%">{% for i in info %}{{ i }}<br/>{% endfor %}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td>No records found.</td></tr>
+                    {% endfor %}
+                    </table></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}

@@ -230,3 +230,37 @@ def RHConfigPatchReportsView(request):
     with open(patch_path) as patch:
         contents = patch.read()
     return HttpResponse(contents, content_type="text/plain")
+
+
+class GettextReportsView(TemplateView):
+
+    template_name = "reports/gettext.html"
+    report_gettext_file = os.path.join(
+        settings.BASE_DIR, 'reports', 'parse-find-gettext'
+    )
+
+    DELIMITER = "§"
+
+    def _format_data(self):
+        gettext_data = {}
+        devel_data = {}
+        with open(self.report_gettext_file) as g_file:
+            lines = g_file.readlines()
+
+        for line in lines:
+            if self.DELIMITER in line:
+                line_parts = line.split(self.DELIMITER)
+                # hardcoded, as per reports formatted
+                if "gettext-devel" in line_parts[1]:
+                    devel_data[line_parts[0]] = line_parts[1].split("|")
+                else:
+                    gettext_data[line_parts[0]] = line_parts[1].split("|")
+
+        return gettext_data, devel_data
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["summary"] = "Gettext dependencies"
+
+        context["gettext_data"], context["devel_data"] = self._format_data()
+        return context

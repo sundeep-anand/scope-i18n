@@ -1,14 +1,21 @@
 {% extends "base.html" %}
 
+{% block style %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+
 {% block body %}
 <div class="content">
-    <span class="pull-right"><i style="color: lightslategrey;">Last Updated</i> Jun 22, 2020</span>
+    <span class="pull-right"><i style="color: lightslategrey;">Last Updated</i> Jun 22, 2020 |
+        <a href="{% url 'home' %}"><i class="fa fa-home"></i></a></span>
     <h1>RPM Translations subpackaging</h1>
     <h2>Problem Statement</h2>
         <div class="sub-content">
             <h3>Size</h3>
                 <p>Currently most of the RPM packaged applications ship the translations with them.
-                    Translations take up more space (even than fonts) in fedora workstation.</p>
+        tly         Translations take up more space (even than fonts) in fedora workstation.</p>
                 <p>Hence there could be a need to limit this considering fedora minimization initiative.</p>
             <h3>Expected Benefits</h3>
                 <ul>

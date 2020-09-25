@@ -18,6 +18,7 @@ class ParseTranslationData(object):
 
     report_files = {
         'raw': 'reports/parse-output',
+        'find': 'reports/parse-find',
         'filter': 'reports/parse-filter',
         'reduce': 'reports/parse-reduce',
         'summary': 'reports/parse-summary'
@@ -162,3 +163,37 @@ class ParseTranslationData(object):
             self.TOTAL_SPEC_FILES, self.SPEC_USING_FIND_LANGS,
             round((self.SPEC_USING_FIND_LANGS * 100) / self.TOTAL_SPEC_FILES, 2), self.TRANS_PKGS
         ))
+
+    def find_in_spec_file(self, keyword, left_pad_keyword=True, right_pad_keyword=False):
+
+        # do cleanup
+        self._clean_up()
+
+        search_results = {}
+
+        # start parsing SPEC files
+        for spec_obj in self.pick_spec_file():
+
+            # Package name and version
+            pkg_name, pkg_version = spec_obj.Name, spec_obj.Version
+            spec_lines = spec_obj.lines
+            keyword = keyword.strip()
+            if left_pad_keyword:
+                keyword = " " + keyword
+            if right_pad_keyword:
+                keyword = keyword + " "
+            # filter conditions
+            # 1. the keyword as-in-full or partially present in the sentence
+            # 2. only BuildRequires and Requires are being scanned to figure out dependency
+            # 3. excluding spec logs
+            filter_lines = [line.strip() for line in spec_lines
+                            if keyword in line and "Requires:" in line and
+                            "- " not in line]
+            if filter_lines:
+                search_results[pkg_name] = filter_lines
+                print("Package: {} \n\t {}".format(pkg_name, "\n\t".join(filter_lines)))
+
+        for k, v in search_results.items():
+            self._write_output('find', k + self.DELIMITER + "|".join(v) + "\n")
+
+        print("Total number of packages: {}".format(len(search_results)))
