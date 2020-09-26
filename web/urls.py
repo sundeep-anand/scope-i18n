@@ -18,8 +18,8 @@ from django.urls import path, include
 from django.views.generic.base import TemplateView
 
 from .views import (
-    ReportsIndexPageView, SPECParseReportsView, CompTransPkgingView,
-    SBSizeCountReportsView, WSSizeCountReportsView, SRVSizeCountReportsView,
+    SPECParseReportsView, CompTransPkgingView, SBSizeCountReportsView,
+    WSSizeCountReportsView, SRVSizeCountReportsView,
     RHConfigPatchReportsView, GettextReportsView
 )
 
@@ -30,12 +30,12 @@ report_urls = [
     path('size-count/ws', WSSizeCountReportsView.as_view(), name="reports-size-count-ws"),
     path('size-count/srv', SRVSizeCountReportsView.as_view(), name="reports-size-count-srv"),
     path('patch/rh-rpm-config', RHConfigPatchReportsView, name="reports-rh-config-patch"),
-    path('gettext', GettextReportsView.as_view(), name="reports-gettext"),
+    path('gettext/deps', GettextReportsView.as_view(), name="reports-gettext"),
 ]
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name="landing.html"), name="home"),
-    path('trans-subpkg', ReportsIndexPageView.as_view(), name="subpkg"),
+    path('', TemplateView.as_view(template_name="index.html"), name="index"),
+    path('gettext', TemplateView.as_view(template_name="gettext.html"), name="gettext"),
     path('reports/', include(report_urls)),
     path('admin/', admin.site.urls),
 ]

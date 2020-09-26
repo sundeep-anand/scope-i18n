@@ -9,11 +9,6 @@ from django.conf import settings
 from django.http import HttpResponse
 
 
-class ReportsIndexPageView(TemplateView):
-
-    template_name = "index.html"
-
-
 class SPECParseReportsView(TemplateView):
 
     template_name = "reports/trans-pkgs.html"

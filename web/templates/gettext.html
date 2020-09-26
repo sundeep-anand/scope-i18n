@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+a:hover {
+    color:lightslategrey;
+}
+a {
+    color: darkslategrey;
+}
+hr {
+  border: 1px dotted;
+}
+.content {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.sub-content {
+    margin-left: 2%;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1><small>analysis around,</small> a few i18n Projects</h1><hr/>
+
+    <ul class="nav nav-tabs">
+      <li><a href="{% url 'index' %}"><h4>RPM Translation Sub-packaging</h4></a></li>
+      <li class="active"><a href="{% url 'gettext' %}"><h4>Gettext Improvements</h4></a></li>
+    </ul>
+
+    <div class="sub-content">
+        <div class="sub-content">
+            <h2>Ideas</h2>
+            <div style="margin:1%">
+                <p> - Upstream <a href="https://savannah.gnu.org/bugs/?group=gettext&func=browse&set=open" target="_blank">bugs</a>,
+                    fedora <a href="https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&component=gettext&list_id=11384574&product=Fedora" target="_blank">bugs</a></p>
+                <p> - Separate out <code>gettext-tools*.rpm</code> from <code>gettext*.rpm</code>
+                    (<a href="https://git.savannah.gnu.org/gitweb/?p=gettext.git;a=blob;f=PACKAGING;h=f4bae4561ec70a9de2532502b5c2358bb976036c;hb=HEAD" target="_blank">inspiration</a>)
+                    (<a href="{% url 'reports-gettext' %}">dependencies</a>)</p>
+                <p> - Per-language configuration for xgettext</p>
+                <p> - Generalize ITS support for json, yaml, etc.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
