@@ -284,6 +284,7 @@ class SOSSummaryView(TemplateView):
         for sos_type, data in dataset.items():
             consolidated_data[sos_type] = dict()
             consolidated_data[sos_type]['lang_wise'] = dict()
+            consolidated_data[sos_type]['lang_terr'] = dict()
             consolidated_data[sos_type]['locale_wise'] = dict()
 
             for data_item in data:
@@ -294,24 +295,30 @@ class SOSSummaryView(TemplateView):
                     locale, count = data_item
 
                     if '.' in locale:
-                        lang, codeset = locale.split('.', 1)
+                        lang_trr, codeset = locale.split('.', 1)
 
                         delimiters = ['-', '_']
 
                         for delimiter in delimiters:
-                            if delimiter in lang:
-                                x, y = lang.split(delimiter)
-                                lang = "{}{}{}".format(x.lower(), delimiter, y.upper())
+                            if delimiter in lang_trr:
+                                lang, trr = lang_trr.split(delimiter)
+                                lang = lang.lower()
+                                lang_trr = "{}{}{}".format(lang, delimiter, trr.upper())
+
+                                if lang not in consolidated_data[sos_type]['lang_wise']:
+                                    consolidated_data[sos_type]['lang_wise'][lang] = int(count)
+                                else:
+                                    consolidated_data[sos_type]['lang_wise'][lang] += int(count)
 
                         codeset = codeset.upper()
                         if codeset == 'UTF8':
                             codeset = 'UTF-8'
-                        new_locale = "{}.{}".format(lang, codeset)
+                        new_locale = "{}.{}".format(lang_trr, codeset)
 
-                        if lang not in consolidated_data[sos_type]['lang_wise']:
-                            consolidated_data[sos_type]['lang_wise'][lang] = int(count)
+                        if lang_trr not in consolidated_data[sos_type]['lang_terr']:
+                            consolidated_data[sos_type]['lang_terr'][lang_trr] = int(count)
                         else:
-                            consolidated_data[sos_type]['lang_wise'][lang] += int(count)
+                            consolidated_data[sos_type]['lang_terr'][lang_trr] += int(count)
                 elif len(data_item) == 1:
                     new_locale = ''
                     count = data_item[0]
@@ -323,7 +330,7 @@ class SOSSummaryView(TemplateView):
 
             consolidated_data[sos_type]['locale_wise'] = \
                 dict(sorted(consolidated_data[sos_type]['locale_wise'].items()))
-            consolidated_data[sos_type]['lang_wise'] = dict(sorted(consolidated_data[sos_type]['lang_wise'].items()))
+            consolidated_data[sos_type]['lang_terr'] = dict(sorted(consolidated_data[sos_type]['lang_terr'].items()))
         return consolidated_data
 
     def _format_data(self):
