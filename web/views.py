@@ -259,3 +259,88 @@ class GettextReportsView(TemplateView):
 
         context["gettext_data"], context["devel_data"] = self._format_data()
         return context
+
+
+class SOSSummaryView(TemplateView):
+
+    template_name = "sos.html"
+    report_sos_dir = os.path.join(
+        settings.BASE_DIR, 'reports', 'sos'
+    )
+
+    sos_data_files = {
+        'LANG': 'LANG-int64',
+        'LC_ALL': 'LC_ALL-int64',
+        'LC_NAME': 'LC_NAME-int64',
+        'LC_CTYPE': 'LC_CTYPE-int64'
+    }
+
+    DELIMITER = "§"
+
+    def _consolidate_data(self, dataset):
+
+        consolidated_data = dict()
+
+        for sos_type, data in dataset.items():
+            consolidated_data[sos_type] = dict()
+            consolidated_data[sos_type]['lang_wise'] = dict()
+            consolidated_data[sos_type]['locale_wise'] = dict()
+
+            for data_item in data:
+                count = 0
+                new_locale = ''
+
+                if len(data_item) == 2:
+                    locale, count = data_item
+
+                    if '.' in locale:
+                        lang, codeset = locale.split('.', 1)
+
+                        delimiters = ['-', '_']
+
+                        for delimiter in delimiters:
+                            if delimiter in lang:
+                                x, y = lang.split(delimiter)
+                                lang = "{}{}{}".format(x.lower(), delimiter, y.upper())
+
+                        codeset = codeset.upper()
+                        if codeset == 'UTF8':
+                            codeset = 'UTF-8'
+                        new_locale = "{}.{}".format(lang, codeset)
+
+                        if lang not in consolidated_data[sos_type]['lang_wise']:
+                            consolidated_data[sos_type]['lang_wise'][lang] = int(count)
+                        else:
+                            consolidated_data[sos_type]['lang_wise'][lang] += int(count)
+                elif len(data_item) == 1:
+                    new_locale = ''
+                    count = data_item[0]
+
+                if new_locale not in consolidated_data[sos_type]['locale_wise']:
+                    consolidated_data[sos_type]['locale_wise'][new_locale] = int(count)
+                else:
+                    consolidated_data[sos_type]['locale_wise'][new_locale] += int(count)
+
+            consolidated_data[sos_type]['locale_wise'] = \
+                dict(sorted(consolidated_data[sos_type]['locale_wise'].items()))
+            consolidated_data[sos_type]['lang_wise'] = dict(sorted(consolidated_data[sos_type]['lang_wise'].items()))
+        return consolidated_data
+
+    def _format_data(self):
+
+        sos_dataset = {}
+
+        for k, v in self.sos_data_files.items():
+
+            with open(os.path.join(
+                    self.report_sos_dir, self.sos_data_files.get(k))
+            ) as sos_file:
+                lines = sos_file.readlines()
+                sos_dataset[k] = [line.strip().split() for line in lines]
+        return self._consolidate_data(sos_dataset)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["summary"] = self._format_data()
+
+        return context

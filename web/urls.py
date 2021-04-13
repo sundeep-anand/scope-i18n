@@ -20,7 +20,7 @@ from django.views.generic.base import TemplateView
 from .views import (
     SPECParseReportsView, CompTransPkgingView, SBSizeCountReportsView,
     WSSizeCountReportsView, SRVSizeCountReportsView,
-    RHConfigPatchReportsView, GettextReportsView
+    RHConfigPatchReportsView, GettextReportsView, SOSSummaryView
 )
 
 report_urls = [
@@ -36,6 +36,7 @@ report_urls = [
 urlpatterns = [
     path('', TemplateView.as_view(template_name="index.html"), name="index"),
     path('gettext', TemplateView.as_view(template_name="gettext.html"), name="gettext"),
+    path('sos', SOSSummaryView.as_view(), name="sos"),
     path('reports/', include(report_urls)),
     path('admin/', admin.site.urls),
 ]

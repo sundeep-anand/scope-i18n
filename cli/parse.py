@@ -3,6 +3,8 @@ import click
 from src.analyse import ParseTranslationData
 
 # SPECs are downloaded from https://src.fedoraproject.org/lookaside/
+
+
 @click.command()
 @click.option(
     '--type', help="Parse format, example, SPEC"

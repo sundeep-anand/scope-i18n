@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+a:hover {
+    color:lightslategrey;
+}
+a {
+    color: darkslategrey;
+}
+hr {
+  border: 1px dotted;
+}
+.content {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.sub-content {
+    margin-left: 2%;
+}
+.sub-content-2 {
+    margin-left: 2%;
+    max-height: 400px;
+    overflow: scroll;
+    border: 1px dotted lightgrey;
+}
+td {
+    width: 1%;
+}
+table, th, td {
+    border-top: 1px dotted lightslategrey;
+    border-bottom: 1px dotted lightslategrey;
+    border-collapse: collapse;
+    margin: 1%;
+    padding: 10px;
+    /* white-space:nowrap; */
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1><small>analysis around,</small> a few i18n Projects</h1><hr/>
+
+    <ul class="nav nav-tabs">
+      <li><a href="{% url 'index' %}"><h4>RPM Translation Sub-packaging</h4></a></li>
+      <li><a href="{% url 'gettext' %}"><h4>Gettext Improvements</h4></a></li>
+      <li class="active"><a href="{% url 'sos' %}"><h4>SOS Summary</h4></a></li>
+    </ul>
+
+    <div class="sub-content">
+        <div class="sub-content">
+            {% for sos_type, data in summary.items %}
+                <h2>{{ sos_type }}</h2>
+                <div class="sub-content">
+                  <div class="row">
+                    {% for k, v in data.items %}
+                      <div class="col-sm-6">
+                        <h3>{{ k }}</h3>
+                        <div class="sub-content-2">
+                          <table>
+                            <thead>
+                                <tr style="color: darkgoldenrod;">
+                                    <td><h4>Lang, Locale</h4></td>
+                                    <td><h4>Count</h4></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for i, j in v.items %}
+                                    <tr>
+                                        <td>{{ i }}</td><td>{{ j }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
