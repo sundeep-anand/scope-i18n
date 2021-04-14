@@ -331,6 +331,7 @@ class SOSSummaryView(TemplateView):
             consolidated_data[sos_type]['locale_wise'] = \
                 dict(sorted(consolidated_data[sos_type]['locale_wise'].items()))
             consolidated_data[sos_type]['lang_terr'] = dict(sorted(consolidated_data[sos_type]['lang_terr'].items()))
+            consolidated_data[sos_type]['lang_wise'] = dict(sorted(consolidated_data[sos_type]['lang_wise'].items()))
         return consolidated_data
 
     def _format_data(self):
