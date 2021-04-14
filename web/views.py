@@ -1,5 +1,6 @@
 # Create your views here.
 import os
+import operator
 
 from django.shortcuts import render
 from django.views.generic import (
@@ -329,9 +330,12 @@ class SOSSummaryView(TemplateView):
                     consolidated_data[sos_type]['locale_wise'][new_locale] += int(count)
 
             consolidated_data[sos_type]['locale_wise'] = \
-                dict(sorted(consolidated_data[sos_type]['locale_wise'].items()))
-            consolidated_data[sos_type]['lang_terr'] = dict(sorted(consolidated_data[sos_type]['lang_terr'].items()))
-            consolidated_data[sos_type]['lang_wise'] = dict(sorted(consolidated_data[sos_type]['lang_wise'].items()))
+                dict(sorted(consolidated_data[sos_type]['locale_wise'].items(),
+                            key=operator.itemgetter(1), reverse=True))
+            consolidated_data[sos_type]['lang_terr'] = \
+                dict(sorted(consolidated_data[sos_type]['lang_terr'].items(), key=operator.itemgetter(1), reverse=True))
+            consolidated_data[sos_type]['lang_wise'] = \
+                dict(sorted(consolidated_data[sos_type]['lang_wise'].items(), key=operator.itemgetter(1), reverse=True))
         return consolidated_data
 
     def _format_data(self):
